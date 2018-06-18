@@ -1,0 +1,44 @@
+{
+    "displayInfo": {
+        "map": {
+            "coordinateFormat": null,
+            "defaultType": {
+                "name": "World Topography"
+            },
+            "home": {
+                "latitude": 43.074692,
+                "longitude": -89.384159,
+                "zoomLevel": 3
+            },
+            "preview": {
+                "coordinateFormat": null,
+                "zoomLevel": 3
+            }
+        },
+        "style": {
+            "backgroundColor": null,
+            "backgroundImage": null,
+            "inputBackgroundColor": null,
+            "inputTextColor": null,
+            "textColor": "#041C43",
+            "toolbarBackgroundColor": "#041C43",
+            "toolbarTextColor": null
+        }
+    },
+    "imagesInfo": {
+        "captureResolution": 640
+    },
+    "queryInfo": {
+        "applySpatialFilter": true,
+        "mode": "manual",
+        "where": "Creator={$username}"
+    },
+    "sentInfo": {
+        "enabled": true
+    },
+    "serviceInfo": {
+        "itemId": "3033ec2ba4b14143b66c3437214516ba",
+        "type": "Feature Service",
+        "url": "https://services2.arcgis.com/4VBZFeVR0gsH4uni/arcgis/rest/services/service_3edd77db53fa4affbe0a6b35d827786e/FeatureServer"
+    }
+}

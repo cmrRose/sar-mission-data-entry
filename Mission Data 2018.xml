@@ -1,0 +1,1967 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:esri="http://esri.com/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <h:head>
+    <h:title>2018 Mission Data Collection</h:title>
+    <model>
+      <instance>
+        <Mission_Data_2018 id="Mission_Data_2018" version="1.5">
+          <generated_note_name_2/>
+          <Team/>
+          <Team_Not_Listed/>
+          <Region/>
+          <Home_County/>
+          <Incident>
+            <Incident_Number/>
+            <Mutual_Aid/>
+            <Mutual_Aid_Number/>
+            <Lead_Agency/>
+            <Type/>
+            <Training_Type/>
+            <Accidental_Transmitter/>
+            <Date/>
+            <Operational_Periods/>
+            <Primary_Area/>
+            <geometry/>
+            <Personnel_Group>
+              <Number_Volunteers/>
+              <Total_Hours/>
+              <Mileage/>
+              <Total_Paid_Hours/>
+            </Personnel_Group>
+            <Incident_Assets_Group>
+              <Aircraft_Used/>
+              <Aircraft_Hours/>
+              <Hoist_Used/>
+            </Incident_Assets_Group>
+          </Incident>
+          <Environment>
+            <Area_Type/>
+            <Area_Type_Other/>
+            <Land_Ownership/>
+            <Land_Ownership_Other/>
+          </Environment>
+          <Subjects>
+            <Number_Subjects>0</Number_Subjects>
+            <Category/>
+            <Category_Other/>
+            <Subject_1>
+              <Age_Sub_1/>
+              <Gender_Sub_1/>
+              <Fitness_Sub_1/>
+              <Experience_Sub_1/>
+              <Mental_Factor_Sub_1/>
+              <Mental_Rating_Sub_1/>
+            </Subject_1>
+            <Subject_2>
+              <Age_Sub_2/>
+              <Gender_Sub_2/>
+              <Fitness_Sub_2/>
+              <Experience_Sub_2/>
+              <Mental_Factor_Sub_2/>
+              <Mental_Rating_Sub_2/>
+            </Subject_2>
+            <Subject_3>
+              <Age_Sub_3/>
+              <Gender_Sub_3/>
+              <Fitness_Sub_3/>
+              <Experience_Sub_3/>
+              <Mental_Factor_Sub_3/>
+              <Mental_Rating_Sub_3/>
+            </Subject_3>
+            <Subject_4>
+              <Age_Sub_4/>
+              <Gender_Sub_4/>
+              <Fitness_Sub_4/>
+              <Experience_Sub_4/>
+              <Mental_Factor_Sub_4/>
+              <Mental_Rating_Sub_4/>
+            </Subject_4>
+            <Subject_5>
+              <Age_Sub_5/>
+              <Gender_Sub_5/>
+              <Fitness_Sub_5/>
+              <Experience_Sub_5/>
+              <Mental_Factor_Sub_5/>
+              <Mental_Rating_Sub_5/>
+            </Subject_5>
+            <Group_Specifics/>
+          </Subjects>
+          <Incident_Outcomes>
+            <Number_Sub_Well>0</Number_Sub_Well>
+            <Number_Sub_Ill_Injured>0</Number_Sub_Ill_Injured>
+            <Number_Sub_DOA>0</Number_Sub_DOA>
+            <Number_Sub_Not_Found>0</Number_Sub_Not_Found>
+            <Outcome_Locations_Group>
+              <Number_Found_Locations/>
+              <Point_Found_count/>
+              <Point_Found jr:template="">
+                <Found_Location/>
+                <How_Found/>
+                <How_Found_Other/>
+                <Mobility_Responsiveness/>
+              </Point_Found>
+            </Outcome_Locations_Group>
+            <Medical_Group>
+              <Level_of_Care_Subject/>
+              <Medical_Problems_Subject/>
+              <Medical_Problems_Other_Subject/>
+              <Number_Tm_Injured>0</Number_Tm_Injured>
+              <Level_of_Care_Rescuer/>
+              <Medical_Problems_Team_Member/>
+              <Medical_Problems_Other_Team_Member/>
+              <Medical_Provider/>
+              <Medical_Provider_Other/>
+            </Medical_Group>
+          </Incident_Outcomes>
+          <Comments>
+            <Comments/>
+            <generated_note_name_142/>
+          </Comments>
+          <meta>
+            <instanceID/>
+          </meta>
+        </Mission_Data_2018>
+      </instance>
+      <instance id="MRA_teams_lookup_v2" src="jr://file-csv/MRA_teams_lookup_v2.csv"/>
+      <bind nodeset="/Mission_Data_2018/generated_note_name_2" readonly="true()" type="string"/>
+      <bind constraint="string-length(.) &lt;= 500" esri:fieldLength="500" esri:fieldType="esriFieldTypeString" jr:constraintMsg="Team name must be 500 or fewer characters." jr:requiredMsg="Please select a team." nodeset="/Mission_Data_2018/Team" required="true()" type="select1"/>
+      <bind constraint="string-length(.) &lt;= 500" esri:fieldLength="500" esri:fieldType="esriFieldTypeString" jr:constraintMsg="Team name must be 500 or fewer characters." nodeset="/Mission_Data_2018/Team_Not_Listed" relevant=" /Mission_Data_2018/Team  = 'Team_Not_Listed'" required="true()" type="string"/>
+      <bind calculate="pulldata('MRA_teams_lookup_v2', 'Region', 'ShortName',  /Mission_Data_2018/Team )" jr:requiredMsg="Please enter an MRA Region" nodeset="/Mission_Data_2018/Region" type="string"/>
+      <bind calculate="pulldata('MRA_teams_lookup_v2', 'County', 'ShortName',  /Mission_Data_2018/Team )" jr:requiredMsg="Please enter your team's home county." nodeset="/Mission_Data_2018/Home_County" type="string"/>
+      <bind constraint="string-length(.) &lt;= 50" esri:fieldLength="50" esri:fieldType="esriFieldTypeString" jr:constraintMsg="Incident Number must be 50 or fewer characters." jr:requiredMsg="Please enter an Incident Number." nodeset="/Mission_Data_2018/Incident/Incident_Number" required="true()" type="string"/>
+      <bind nodeset="/Mission_Data_2018/Incident/Mutual_Aid" required="true()" type="select1"/>
+      <bind constraint="string-length(.) &lt;= 250" esri:fieldLength="250" esri:fieldType="esriFieldTypeString" jr:constraintMsg="Mutual Aid Number must be 250 or fewer characters." nodeset="/Mission_Data_2018/Incident/Mutual_Aid_Number" relevant=" /Mission_Data_2018/Incident/Mutual_Aid  = 'YES'" type="string"/>
+      <bind nodeset="/Mission_Data_2018/Incident/Lead_Agency" relevant=" /Mission_Data_2018/Incident/Mutual_Aid  = 'YES'" type="select1"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" jr:requiredMsg="Please enter an Incident Type." nodeset="/Mission_Data_2018/Incident/Type" required="true()" type="select1"/>
+      <bind constraint="string-length(.) &lt;= 500" esri:fieldLength="500" esri:fieldType="esriFieldTypeString" jr:constraintMsg="Type of Training must be 500 or fewer characters." nodeset="/Mission_Data_2018/Incident/Training_Type" relevant=" /Mission_Data_2018/Incident/Type  = 'TRAINING'" required="true()" type="string"/>
+      <bind jr:requiredMsg="Please indicate whether the transmitter was accidentally activated." nodeset="/Mission_Data_2018/Incident/Accidental_Transmitter" relevant="selected( /Mission_Data_2018/Incident/Type , 'AIRCRAFT_DOWN/ELT_ACTIVATION') or selected( /Mission_Data_2018/Incident/Type , 'PLB_ACTIVATION') or selected( /Mission_Data_2018/Incident/Type , 'SEND_ACTIVATION')" required="true()" type="select1"/>
+      <bind esri:fieldType="esriFieldTypeDate" jr:requiredMsg="Please enter an Incident Start Date." nodeset="/Mission_Data_2018/Incident/Date" required="true()" type="dateTime"/>
+      <bind constraint=". &gt;= 0" esri:fieldType="esriFieldTypeInteger" jr:constraintMsg="Number of Operational Periods must be greater than or equal to zero." nodeset="/Mission_Data_2018/Incident/Operational_Periods" relevant=" /Mission_Data_2018/Incident/Type  != 'TRAINING' and  /Mission_Data_2018/Incident/Type  != 'PUBLIC_RELATIONS/PSAR_EVENT'" type="int"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Incident/Primary_Area" relevant=" /Mission_Data_2018/Incident/Type  != 'TRAINING' and  /Mission_Data_2018/Incident/Type  != 'PUBLIC_RELATIONS/PSAR_EVENT'" type="select1"/>
+      <bind esri:fieldType="esriFieldTypeGeometry" jr:requiredMsg="Please enter the IPP." nodeset="/Mission_Data_2018/Incident/geometry" required="true()" type="geopoint"/>
+      <bind constraint=". &gt;= 0" esri:fieldType="esriFieldTypeInteger" jr:constraintMsg="Number of volunteers must be greater than or equal to zero." jr:requiredMsg="Please enter the Number of Volunteers." nodeset="/Mission_Data_2018/Incident/Personnel_Group/Number_Volunteers" required="true()" type="int"/>
+      <bind constraint=". &gt;= 0" esri:fieldType="esriFieldTypeInteger" jr:constraintMsg="Number of volunteer hours must be greater than or equal to zero." jr:requiredMsg="Please enter the Total Volunteer Hours." nodeset="/Mission_Data_2018/Incident/Personnel_Group/Total_Hours" required="true()" type="decimal"/>
+      <bind constraint=". &gt;= 0" esri:fieldType="esriFieldTypeInteger" jr:constraintMsg="Volunteer mileage must be greater than or equal to zero." nodeset="/Mission_Data_2018/Incident/Personnel_Group/Mileage" type="decimal"/>
+      <bind constraint=". &gt;= 0" esri:fieldType="esriFieldTypeInteger" jr:constraintMsg="Paid staff hours must be greater than or equal to zero." nodeset="/Mission_Data_2018/Incident/Personnel_Group/Total_Paid_Hours" type="decimal"/>
+      <bind nodeset="/Mission_Data_2018/Incident/Incident_Assets_Group" relevant=" /Mission_Data_2018/Incident/Type  != 'TRAINING' and  /Mission_Data_2018/Incident/Type  != 'PUBLIC_RELATIONS/PSAR_EVENT'"/>
+      <bind nodeset="/Mission_Data_2018/Incident/Incident_Assets_Group/Aircraft_Used" type="select"/>
+      <bind constraint=". &gt;= 0" esri:fieldType="esriFieldTypeInteger" jr:constraintMsg="Aircraft hours must be greater than or equal to zero." nodeset="/Mission_Data_2018/Incident/Incident_Assets_Group/Aircraft_Hours" relevant="selected( /Mission_Data_2018/Incident/Incident_Assets_Group/Aircraft_Used , 'AIRCRAFT-FIXED_WING') or selected( /Mission_Data_2018/Incident/Incident_Assets_Group/Aircraft_Used , 'AIRCRAFT-HELICOPTER') or selected( /Mission_Data_2018/Incident/Incident_Assets_Group/Aircraft_Used , 'AIRCRAFT-UAV')" type="int"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Incident/Incident_Assets_Group/Hoist_Used" relevant="selected( /Mission_Data_2018/Incident/Incident_Assets_Group/Aircraft_Used , 'AIRCRAFT-HELICOPTER')" type="select1"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" jr:requiredMsg="Please enter an Area Type." nodeset="/Mission_Data_2018/Environment/Area_Type" required="true()" type="select1"/>
+      <bind constraint="string-length(.) &lt;= 250" jr:constraintMsg="Area type must be 250 or fewer characters." jr:requiredMsg="Please specify 'Other' Area Type" nodeset="/Mission_Data_2018/Environment/Area_Type_Other" relevant="selected( /Mission_Data_2018/Environment/Area_Type , 'OTHER')" required="true()" type="string"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" jr:requiredMsg="Please enter Land Ownership." nodeset="/Mission_Data_2018/Environment/Land_Ownership" required="true()" type="select1"/>
+      <bind constraint="string-length(.) &lt;= 250" jr:constraintMsg="Land ownership must be 250 or fewer characters." jr:requiredMsg="Please specify 'Other' Land Ownership" nodeset="/Mission_Data_2018/Environment/Land_Ownership_Other" relevant="selected( /Mission_Data_2018/Environment/Land_Ownership , 'OTHER')" required="true()" type="string"/>
+      <bind nodeset="/Mission_Data_2018/Subjects" relevant=" /Mission_Data_2018/Incident/Type  != 'TRAINING' and  /Mission_Data_2018/Incident/Type  != 'PUBLIC_RELATIONS/PSAR_EVENT'"/>
+      <bind constraint=". &gt;= 0" esri:fieldType="esriFieldTypeInteger" jr:constraintMsg="Number of subjects must be greater than or equal to zero." jr:requiredMsg="Please enter a Number of Subjects." nodeset="/Mission_Data_2018/Subjects/Number_Subjects" required="true()" type="int"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" jr:requiredMsg="Please select a Subject Category." nodeset="/Mission_Data_2018/Subjects/Category" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 0" required="true()" type="select1"/>
+      <bind constraint="string-length(.) &lt;= 500" esri:fieldLength="500" esri:fieldType="esriFieldTypeString" jr:constraintMsg="Other category must be 500 or fewer characters." jr:requiredMsg="Please specify subject category: other" nodeset="/Mission_Data_2018/Subjects/Category_Other" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 0 and selected( /Mission_Data_2018/Subjects/Category , 'OTHER')" required="true()" type="string"/>
+      <bind nodeset="/Mission_Data_2018/Subjects/Subject_1" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 0 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6"/>
+      <bind constraint=". &gt;= 0 and . &lt; 120" esri:fieldType="esriFieldTypeInteger" jr:constraintMsg="Subject age must be greater than or equal to 0 years and less than 120 years." nodeset="/Mission_Data_2018/Subjects/Subject_1/Age_Sub_1" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 0 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="int"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Subjects/Subject_1/Gender_Sub_1" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 0 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="select1"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Subjects/Subject_1/Fitness_Sub_1" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 0 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="select1"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Subjects/Subject_1/Experience_Sub_1" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 0 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="select1"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Subjects/Subject_1/Mental_Factor_Sub_1" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 0 and  /Mission_Data_2018/Incident/Type  = 'SEARCH' and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="select"/>
+      <bind nodeset="/Mission_Data_2018/Subjects/Subject_1/Mental_Rating_Sub_1" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 0 and  /Mission_Data_2018/Incident/Type  = 'SEARCH' and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="select1"/>
+      <bind nodeset="/Mission_Data_2018/Subjects/Subject_2" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 1 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6"/>
+      <bind constraint=". &gt;= 0 and . &lt; 120" esri:fieldType="esriFieldTypeInteger" jr:constraintMsg="Subject age must be greater than or equal to 0 years and less than 120 years." nodeset="/Mission_Data_2018/Subjects/Subject_2/Age_Sub_2" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 1 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="int"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Subjects/Subject_2/Gender_Sub_2" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 1 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="select1"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Subjects/Subject_2/Fitness_Sub_2" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 1 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="select1"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Subjects/Subject_2/Experience_Sub_2" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 1 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="select1"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Subjects/Subject_2/Mental_Factor_Sub_2" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 1 and  /Mission_Data_2018/Incident/Type  = 'SEARCH' and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="select1"/>
+      <bind nodeset="/Mission_Data_2018/Subjects/Subject_2/Mental_Rating_Sub_2" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 1 and  /Mission_Data_2018/Incident/Type  = 'SEARCH' and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="select1"/>
+      <bind nodeset="/Mission_Data_2018/Subjects/Subject_3" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 2 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6"/>
+      <bind constraint=". &gt;= 0 and . &lt; 120" esri:fieldType="esriFieldTypeInteger" jr:constraintMsg="Subject age must be greater than or equal to 0 years and less than 120 years." nodeset="/Mission_Data_2018/Subjects/Subject_3/Age_Sub_3" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 2 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="int"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Subjects/Subject_3/Gender_Sub_3" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 2 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="select1"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Subjects/Subject_3/Fitness_Sub_3" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 2 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="select1"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Subjects/Subject_3/Experience_Sub_3" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 2 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="select1"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Subjects/Subject_3/Mental_Factor_Sub_3" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 2 and  /Mission_Data_2018/Incident/Type  = 'SEARCH' and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="select1"/>
+      <bind nodeset="/Mission_Data_2018/Subjects/Subject_3/Mental_Rating_Sub_3" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 2 and  /Mission_Data_2018/Incident/Type  = 'SEARCH' and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="select1"/>
+      <bind nodeset="/Mission_Data_2018/Subjects/Subject_4" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 3 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6"/>
+      <bind constraint=". &gt;= 0 and . &lt; 120" esri:fieldType="esriFieldTypeInteger" jr:constraintMsg="Subject age must be greater than or equal to 0 years and less than 120 years." nodeset="/Mission_Data_2018/Subjects/Subject_4/Age_Sub_4" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 3 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="int"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Subjects/Subject_4/Gender_Sub_4" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 3 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="select1"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Subjects/Subject_4/Fitness_Sub_4" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 3 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="select1"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Subjects/Subject_4/Experience_Sub_4" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 3 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="select1"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Subjects/Subject_4/Mental_Factor_Sub_4" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 3 and  /Mission_Data_2018/Incident/Type  = 'SEARCH' and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="select1"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Subjects/Subject_4/Mental_Rating_Sub_4" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 3 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6 and  /Mission_Data_2018/Incident/Type  = 'SEARCH'" type="select1"/>
+      <bind nodeset="/Mission_Data_2018/Subjects/Subject_5" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 4 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6"/>
+      <bind constraint=". &gt;= 0 and . &lt; 120" esri:fieldType="esriFieldTypeInteger" jr:constraintMsg="Subject age must be greater than or equal to 0 years and less than 120 years." nodeset="/Mission_Data_2018/Subjects/Subject_5/Age_Sub_5" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 4 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="int"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Subjects/Subject_5/Gender_Sub_5" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 4 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="select1"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Subjects/Subject_5/Fitness_Sub_5" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 4 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="select1"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Subjects/Subject_5/Experience_Sub_5" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 4 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6" type="select1"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Subjects/Subject_5/Mental_Factor_Sub_5" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 4 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6 and  /Mission_Data_2018/Incident/Type  = 'SEARCH'" type="select1"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Subjects/Subject_5/Mental_Rating_Sub_5" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 4 and  /Mission_Data_2018/Subjects/Number_Subjects  &lt; 6 and  /Mission_Data_2018/Incident/Type  = 'SEARCH'" type="select1"/>
+      <bind constraint="string-length(.) &lt;= 2000" esri:fieldLength="2000" esri:fieldType="esriFieldTypeString" jr:constraintMsg="Group specifics must be 2000 or fewer characters." nodeset="/Mission_Data_2018/Subjects/Group_Specifics" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 5" type="string"/>
+      <bind nodeset="/Mission_Data_2018/Incident_Outcomes" relevant=" /Mission_Data_2018/Incident/Type  != 'TRAINING' and  /Mission_Data_2018/Incident/Type  != 'PUBLIC_RELATIONS/PSAR_EVENT'"/>
+      <bind constraint=". &gt;= 0" esri:fieldType="esriFieldTypeInteger" jr:constraintMsg="Number of subjects found alive and well must be greater than or equal to zero." jr:requiredMsg="Please indicate how many subjects were found alive and well" nodeset="/Mission_Data_2018/Incident_Outcomes/Number_Sub_Well" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 0" required="true()" type="int"/>
+      <bind constraint=". &gt;= 0" esri:fieldType="esriFieldTypeInteger" jr:constraintMsg="Number of subjects found ill or injured must be greater than or equal to zero." jr:requiredMsg="Please indicate how many subjects were found ill or injured" nodeset="/Mission_Data_2018/Incident_Outcomes/Number_Sub_Ill_Injured" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 0" required="true()" type="int"/>
+      <bind constraint=". &gt;= 0" esri:fieldType="esriFieldTypeInteger" jr:constraintMsg="Number of subjects found DOA must be greater than or equal to zero." jr:requiredMsg="Please indicate how many subjects were found deceased." nodeset="/Mission_Data_2018/Incident_Outcomes/Number_Sub_DOA" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 0" required="true()" type="int"/>
+      <bind constraint=". &gt;= 0" esri:fieldType="esriFieldTypeInteger" jr:constraintMsg="Number of subjects not found must be greater than or equal to zero." jr:requiredMsg="Please indicate how many subjects were not found" nodeset="/Mission_Data_2018/Incident_Outcomes/Number_Sub_Not_Found" relevant=" /Mission_Data_2018/Subjects/Number_Subjects  &gt; 0" required="true()" type="int"/>
+      <bind nodeset="/Mission_Data_2018/Incident_Outcomes/Outcome_Locations_Group" relevant="( /Mission_Data_2018/Incident_Outcomes/Number_Sub_Ill_Injured  &gt; 0 or  /Mission_Data_2018/Incident_Outcomes/Number_Sub_Well  &gt; 0 or  /Mission_Data_2018/Incident_Outcomes/Number_Sub_DOA  &gt; 0) and (selected( /Mission_Data_2018/Incident/Type , 'SEARCH') or selected( /Mission_Data_2018/Incident/Type , 'AIRCRAFT_DOWN/ELT_ACTIVATION') or selected( /Mission_Data_2018/Incident/Type , 'PLB_ACTIVATION') or selected( /Mission_Data_2018/Incident/Type , 'SEND_ACTIVATION'))"/>
+      <bind constraint=". &gt;= 0" jr:constraintMsg="Number of found locations must be greater than or equal to zero." jr:requiredMsg="Please indicate the number of found locations" nodeset="/Mission_Data_2018/Incident_Outcomes/Outcome_Locations_Group/Number_Found_Locations" relevant="( /Mission_Data_2018/Incident_Outcomes/Number_Sub_Ill_Injured  &gt; 0 or  /Mission_Data_2018/Incident_Outcomes/Number_Sub_Well  &gt; 0 or  /Mission_Data_2018/Incident_Outcomes/Number_Sub_DOA  &gt; 0) and (selected( /Mission_Data_2018/Incident/Type , 'SEARCH') or selected( /Mission_Data_2018/Incident/Type , 'AIRCRAFT_DOWN/ELT_ACTIVATION') or selected( /Mission_Data_2018/Incident/Type , 'PLB_ACTIVATION') or selected( /Mission_Data_2018/Incident/Type , 'SEND_ACTIVATION'))" required="true()" type="int"/>
+      <bind calculate=" /Mission_Data_2018/Incident_Outcomes/Outcome_Locations_Group/Number_Found_Locations " nodeset="/Mission_Data_2018/Incident_Outcomes/Outcome_Locations_Group/Point_Found_count" readonly="true()" type="string"/>
+      <bind nodeset="/Mission_Data_2018/Incident_Outcomes/Outcome_Locations_Group/Point_Found" relevant="( /Mission_Data_2018/Incident_Outcomes/Number_Sub_Ill_Injured  &gt; 0 or  /Mission_Data_2018/Incident_Outcomes/Number_Sub_Well  &gt; 0 or  /Mission_Data_2018/Incident_Outcomes/Number_Sub_DOA  &gt; 0) and  /Mission_Data_2018/Incident_Outcomes/Outcome_Locations_Group/Number_Found_Locations  &gt; 0"/>
+      <bind nodeset="/Mission_Data_2018/Incident_Outcomes/Outcome_Locations_Group/Point_Found/Found_Location" relevant="( /Mission_Data_2018/Incident_Outcomes/Number_Sub_Ill_Injured  &gt; 0 or  /Mission_Data_2018/Incident_Outcomes/Number_Sub_Well  &gt; 0 or  /Mission_Data_2018/Incident_Outcomes/Number_Sub_DOA  &gt; 0) and  /Mission_Data_2018/Incident_Outcomes/Outcome_Locations_Group/Number_Found_Locations  &gt; 0" required="true()" type="geopoint"/>
+      <bind jr:requiredMsg="Please indicate how subjects were found." nodeset="/Mission_Data_2018/Incident_Outcomes/Outcome_Locations_Group/Point_Found/How_Found" relevant="( /Mission_Data_2018/Incident_Outcomes/Number_Sub_Ill_Injured  &gt; 0 or  /Mission_Data_2018/Incident_Outcomes/Number_Sub_Well  &gt; 0 or  /Mission_Data_2018/Incident_Outcomes/Number_Sub_DOA  &gt; 0) and  /Mission_Data_2018/Incident_Outcomes/Outcome_Locations_Group/Number_Found_Locations  &gt; 0" required="true()" type="select"/>
+      <bind constraint="string-length(.) &lt;= 500" esri:fieldLength="500" esri:fieldType="esriFieldTypeString" jr:constraintMsg="Description of how subjects were found must be 500 or fewer characters." jr:requiredMsg="Please indicate how subjects were found." nodeset="/Mission_Data_2018/Incident_Outcomes/Outcome_Locations_Group/Point_Found/How_Found_Other" relevant="( /Mission_Data_2018/Incident_Outcomes/Number_Sub_Ill_Injured  &gt; 0 or  /Mission_Data_2018/Incident_Outcomes/Number_Sub_Well  &gt; 0 or  /Mission_Data_2018/Incident_Outcomes/Number_Sub_DOA  &gt; 0) and  /Mission_Data_2018/Incident_Outcomes/Outcome_Locations_Group/Number_Found_Locations  &gt; 0 and selected( /Mission_Data_2018/Incident_Outcomes/Outcome_Locations_Group/Point_Found/How_Found , 'OTHER')" required="true()" type="string"/>
+      <bind jr:requiredMsg="Please indicate responsiveness and mobility." nodeset="/Mission_Data_2018/Incident_Outcomes/Outcome_Locations_Group/Point_Found/Mobility_Responsiveness" relevant="( /Mission_Data_2018/Incident_Outcomes/Number_Sub_Ill_Injured  &gt; 0 or  /Mission_Data_2018/Incident_Outcomes/Number_Sub_Well  &gt; 0 or  /Mission_Data_2018/Incident_Outcomes/Number_Sub_DOA  &gt; 0) and  /Mission_Data_2018/Incident_Outcomes/Outcome_Locations_Group/Number_Found_Locations  &gt; 0" required="true()" type="select"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Incident_Outcomes/Medical_Group/Level_of_Care_Subject" relevant=" /Mission_Data_2018/Incident_Outcomes/Number_Sub_Ill_Injured  &gt; 0" type="select1"/>
+      <bind nodeset="/Mission_Data_2018/Incident_Outcomes/Medical_Group/Medical_Problems_Subject" relevant=" /Mission_Data_2018/Incident_Outcomes/Number_Sub_Ill_Injured  &gt; 0" type="select"/>
+      <bind constraint="string-length(.) &lt;= 500" esri:fieldLength="500" esri:fieldType="esriFieldTypeString" jr:constraintMsg="Other medical problems must be 500 or fewer characters." nodeset="/Mission_Data_2018/Incident_Outcomes/Medical_Group/Medical_Problems_Other_Subject" relevant="selected( /Mission_Data_2018/Incident_Outcomes/Medical_Group/Medical_Problems_Subject , 'OTHER')" required="true()" type="string"/>
+      <bind constraint=". &gt;= 0" esri:fieldType="esriFieldTypeInteger" jr:constraintMsg="Number of team members ill or injured must be greater than or equal to zero." nodeset="/Mission_Data_2018/Incident_Outcomes/Medical_Group/Number_Tm_Injured" type="int"/>
+      <bind esri:fieldLength="50" esri:fieldType="esriFieldTypeString" nodeset="/Mission_Data_2018/Incident_Outcomes/Medical_Group/Level_of_Care_Rescuer" relevant=" /Mission_Data_2018/Incident_Outcomes/Medical_Group/Number_Tm_Injured  &gt; 0" type="select1"/>
+      <bind nodeset="/Mission_Data_2018/Incident_Outcomes/Medical_Group/Medical_Problems_Team_Member" relevant=" /Mission_Data_2018/Incident_Outcomes/Medical_Group/Number_Tm_Injured  &gt; 0" type="select"/>
+      <bind constraint="string-length(.) &lt;= 500" esri:fieldLength="500" esri:fieldType="esriFieldTypeString" jr:constraintMsg="Other medical problems must be 500 or fewer characters." nodeset="/Mission_Data_2018/Incident_Outcomes/Medical_Group/Medical_Problems_Other_Team_Member" relevant="selected( /Mission_Data_2018/Incident_Outcomes/Medical_Group/Medical_Problems_Team_Member , 'OTHER')" required="true()" type="string"/>
+      <bind nodeset="/Mission_Data_2018/Incident_Outcomes/Medical_Group/Medical_Provider" relevant=" /Mission_Data_2018/Incident_Outcomes/Medical_Group/Number_Tm_Injured  &gt; 0 or  /Mission_Data_2018/Incident_Outcomes/Number_Sub_Ill_Injured  &gt; 0" type="select"/>
+      <bind constraint="string-length(.) &lt;= 500" esri:fieldLength="500" esri:fieldType="esriFieldTypeString" jr:constraintMsg="Other medical provider must be 500 or fewer characters." nodeset="/Mission_Data_2018/Incident_Outcomes/Medical_Group/Medical_Provider_Other" relevant="( /Mission_Data_2018/Incident_Outcomes/Medical_Group/Number_Tm_Injured  &gt; 0 or  /Mission_Data_2018/Incident_Outcomes/Number_Sub_Ill_Injured  &gt; 0) and selected( /Mission_Data_2018/Incident_Outcomes/Medical_Group/Medical_Provider , 'Other')" required="true()" type="string"/>
+      <bind constraint="string-length(.) &lt;= 8000" esri:fieldLength="8000" esri:fieldType="esriFieldTypeString" jr:constraintMsg="Comment must be 8000 or fewer characters." nodeset="/Mission_Data_2018/Comments/Comments" type="string"/>
+      <bind nodeset="/Mission_Data_2018/Comments/generated_note_name_142" readonly="true()" type="string"/>
+      <bind calculate="concat('uuid:', uuid())" nodeset="/Mission_Data_2018/meta/instanceID" readonly="true()" type="string"/>
+    </model>
+  </h:head>
+  <h:body>
+    <input ref="/Mission_Data_2018/generated_note_name_2">
+      <label>This is the official 2018 MRA Mission Data Collection Form. The form will ask you a series of questions and location-information related to the type of mission you are reporting. You can also complete the form using the &lt;a href=&quot;https://doc.arcgis.com/en/survey123/download/&quot; target=&quot;_blank&quot;&gt;Survey123 Mobile Application&lt;/a&gt;. &lt;br&gt;&lt;br&gt;If you have any questions or experience issues, please write a descriptive email to &lt;a href=&quot;mailto:mramapping@gmail.com?Subject=Mission%20Data%20Form&quot; target=&quot;_top&quot;&gt;mramapping@gmail.com&lt;/a&gt;.</label>
+    </input>
+    <select1 appearance="autocomplete" ref="/Mission_Data_2018/Team">
+      <label>Team Name</label>
+      <hint>Start typing or select from the dropdown. If your team is not in the list, please select &quot;Team Not Listed&quot; and specify below.</hint>
+      <item>
+        <label>Alaska Mountain Rescue Group</label>
+        <value>Alaska_Mtn_Rescue_Group</value>
+      </item>
+      <item>
+        <label>Albuquerque Mountain Rescue Council</label>
+        <value>Albuquerque_Mtn_Rescue_Council</value>
+      </item>
+      <item>
+        <label>Allegheny Mountain Rescue Group</label>
+        <value>Allegheny_Mtn_Rescue_Group</value>
+      </item>
+      <item>
+        <label>Alpine Rescue Team</label>
+        <value>Alpine_Rescue_Team</value>
+      </item>
+      <item>
+        <label>Altadena Mountain Rescue Team</label>
+        <value>Altadena_Mountain_Rescue_Team</value>
+      </item>
+      <item>
+        <label>Appalachian Mountain Rescue Team</label>
+        <value>Appalachian_Mtn_Rescue_Team</value>
+      </item>
+      <item>
+        <label>Atalaya Search and Rescue Team</label>
+        <value>Atalaya_SAR</value>
+      </item>
+      <item>
+        <label>Bay Area Mountain Rescue Team</label>
+        <value>Bay_Area_Mtn_Rescue_Team</value>
+      </item>
+      <item>
+        <label>Bellingham Mountain Rescue Council</label>
+        <value>Bellingham_Mtn_Rescue_Council</value>
+      </item>
+      <item>
+        <label>Blue Knob Ski Patrol</label>
+        <value>Blue_Knob_Ski_Patrol</value>
+      </item>
+      <item>
+        <label>Cache County Sheriff's Search &amp; Rescue</label>
+        <value>Cache_County_Sheriffs_SAR</value>
+      </item>
+      <item>
+        <label>Central Arizona Mountain Rescue Association</label>
+        <value>Central_Arizona_MRA</value>
+      </item>
+      <item>
+        <label>Central Washington Mountain Rescue</label>
+        <value>Central_Washington_Mtn_Rescue</value>
+      </item>
+      <item>
+        <label>Chaffee County SAR North</label>
+        <value>Chaffee_County_SAR_North</value>
+      </item>
+      <item>
+        <label>Chattanooga-Hamilton County Rescue Service</label>
+        <value>Chattanooga-Hamilton_Co_Resc</value>
+      </item>
+      <item>
+        <label>China Lake Mountain Rescue Group</label>
+        <value>China_Lake_Mtn_Rescue_Group</value>
+      </item>
+      <item>
+        <label>Coconino County Sheriff's Search &amp; Rescue</label>
+        <value>Coconino_Co_Sheriffs_SAR_Unit</value>
+      </item>
+      <item>
+        <label>Contra Costa County Sheriff's Search and Rescue</label>
+        <value>Contra_Costa_Co_Sheriffs_SAR</value>
+      </item>
+      <item>
+        <label>Corvallis Mountain Rescue Unit</label>
+        <value>Corvallis_Mtn_Rescue_Unit</value>
+      </item>
+      <item>
+        <label>Crested Butte Search and Rescue</label>
+        <value>Crested_Butte_SAR</value>
+      </item>
+      <item>
+        <label>Davis County Sheriff's Search &amp; Rescue</label>
+        <value>Davis_County_Sheriffs_SAR</value>
+      </item>
+      <item>
+        <label>Deschutes County Search &amp; Rescue</label>
+        <value>Deschutes_County_SAR</value>
+      </item>
+      <item>
+        <label>Douglas County Search &amp; Rescue Colorado</label>
+        <value>Douglas_County_SAR_CO</value>
+      </item>
+      <item>
+        <label>Douglas County Search &amp; Rescue Nevada</label>
+        <value>Douglas_County_SAR_Nevada</value>
+      </item>
+      <item>
+        <label>El Paso County Search &amp; Rescue</label>
+        <value>El_Paso_County_SAR</value>
+      </item>
+      <item>
+        <label>Eugene Mountain Rescue</label>
+        <value>Eugene_Mtn_Rescue</value>
+      </item>
+      <item>
+        <label>Everett Mountain Rescue Unit</label>
+        <value>Everett_Mtn_Rescue_Unit</value>
+      </item>
+      <item>
+        <label>Fillmore Search and Rescue</label>
+        <value>Fillmore_SAR</value>
+      </item>
+      <item>
+        <label>Fremont Search and Rescue</label>
+        <value>Fremont_SAR</value>
+      </item>
+      <item>
+        <label>Fresno County Sheriff's Search &amp; Rescue Mountaineering Team</label>
+        <value>Fresno_Co_Sheriffs_SAR_Mtneering</value>
+      </item>
+      <item>
+        <label>Garfield County Search and Rescue</label>
+        <value>Garfield_County_SAR</value>
+      </item>
+      <item>
+        <label>Grand County Search and Rescue</label>
+        <value>Grand_County_SAR</value>
+      </item>
+      <item>
+        <label>Hood River Crag Rats</label>
+        <value>Hood_River_Crag_Rats</value>
+      </item>
+      <item>
+        <label>Idaho Mountain Search &amp; Rescue</label>
+        <value>Idaho_Mtn_SAR</value>
+      </item>
+      <item>
+        <label>Inland Northwest Search &amp; Rescue</label>
+        <value>Inland_Northwest_SAR</value>
+      </item>
+      <item>
+        <label>Inyo County Sheriff's Posse Search &amp; Rescue</label>
+        <value>Inyo_Co_Sheriffs_Posse_SAR</value>
+      </item>
+      <item>
+        <label>Juneau Mountain Rescue</label>
+        <value>Juneau_Mtn_Rescue</value>
+      </item>
+      <item>
+        <label>Knoxville Volunteer Emergency Rescue Squad</label>
+        <value>Knoxville_Vol_Emerg_Rescue</value>
+      </item>
+      <item>
+        <label>Larimer County Search &amp; Rescue</label>
+        <value>Larimer_County_SAR</value>
+      </item>
+      <item>
+        <label>Las Vegas Metro PD Search &amp; Rescue</label>
+        <value>Las_Vegas_Metro_PD_SAR</value>
+      </item>
+      <item>
+        <label>Malibu Mountain Rescue Team</label>
+        <value>Malibu_Mtn_Rescue_Team</value>
+      </item>
+      <item>
+        <label>Marin County Sheriff’s Search and Rescue Unit</label>
+        <value>Marin_County_Sherrif_SAR</value>
+      </item>
+      <item>
+        <label>Mono County Search &amp; Rescue</label>
+        <value>Mono_County_Sheriff_SAR</value>
+      </item>
+      <item>
+        <label>Monterey County Sheriff’s Search and Rescue</label>
+        <value>Monterey_County</value>
+      </item>
+      <item>
+        <label>Montrose Search &amp; Rescue Team</label>
+        <value>Montrose_SAR_Team</value>
+      </item>
+      <item>
+        <label>Mountain Rescue Aspen, Inc.</label>
+        <value>Mtn_Rescue_Aspen</value>
+      </item>
+      <item>
+        <label>New Jersey Search &amp; Rescue MRT</label>
+        <value>New_Jersey_SAR</value>
+      </item>
+      <item>
+        <label>Ohio Special Response Team</label>
+        <value>Ohio_Special_Response_Team</value>
+      </item>
+      <item>
+        <label>Olympic Mountain Rescue</label>
+        <value>Olympic_Mtn_Rescue</value>
+      </item>
+      <item>
+        <label>Orange County Sheriff's Dept Search and Rescue</label>
+        <value>Orange_Co_Sheriff_Dept_SAR</value>
+      </item>
+      <item>
+        <label>Park County Search &amp; Rescue</label>
+        <value>Park_County_SAR</value>
+      </item>
+      <item>
+        <label>Placer County Sheriff Mountain Rescue</label>
+        <value>Placer_Co_Mtn_Rescue</value>
+      </item>
+      <item>
+        <label>Portland Mountain Rescue</label>
+        <value>Portland_Mtn_Rescue_Unit</value>
+      </item>
+      <item>
+        <label>Ravalli County Search &amp; Rescue</label>
+        <value>Ravalli_County_SAR</value>
+      </item>
+      <item>
+        <label>Riverside Mountain Rescue Unit</label>
+        <value>Riverside_Mtn_Rescue_Unit</value>
+      </item>
+      <item>
+        <label>Rocky Mountain House Search &amp; Rescue</label>
+        <value>Rocky_Mtn_House_SAR</value>
+      </item>
+      <item>
+        <label>Rocky Mountain Rescue Group</label>
+        <value>Rocky_Mtn_Rescue_Group</value>
+      </item>
+      <item>
+        <label>Salt Lake County Sheriff's Search &amp; Rescue</label>
+        <value>Salt_Lake_County_Sheriffs_SAR</value>
+      </item>
+      <item>
+        <label>San Bernardino Cave &amp; Technical Rescue Team</label>
+        <value>San_Bernardino_Cave_Tech_Resc</value>
+      </item>
+      <item>
+        <label>San Bernardino Mountain Search &amp; Rescue Team</label>
+        <value>San_Bernardino_Mtn_SAR</value>
+      </item>
+      <item>
+        <label>San Diego Mountain Rescue Team</label>
+        <value>San_Diego_Mtn_Rescue_Team</value>
+      </item>
+      <item>
+        <label>San Dimas Mountain Rescue Team</label>
+        <value>San_Dimas_Mtn_Rescue_Team</value>
+      </item>
+      <item>
+        <label>Santa Barbara County Search &amp; Rescue</label>
+        <value>Santa_Barbara_County_SAR</value>
+      </item>
+      <item>
+        <label>Santa Clara Sheriff Search &amp; Rescue</label>
+        <value>Santa_Clara_Sheriff_SAR</value>
+      </item>
+      <item>
+        <label>Santa Clarita Valley Search &amp; Rescue</label>
+        <value>Santa_Clarita_Valley_SAR</value>
+      </item>
+      <item>
+        <label>Seattle Mountain Rescue Council</label>
+        <value>Seattle_Mtn_Rescue_Council</value>
+      </item>
+      <item>
+        <label>Sierra Madre Search &amp; Rescue Team</label>
+        <value>Sierra_Madre_SAR</value>
+      </item>
+      <item>
+        <label>Sitka Mountain Rescue</label>
+        <value>Sitka_Mtn_Rescue</value>
+      </item>
+      <item>
+        <label>Skagit Mountain Rescue</label>
+        <value>Skagit_Mtn_Rescue_Unit</value>
+      </item>
+      <item>
+        <label>Southern Arizona Rescue Association</label>
+        <value>Southern_Arizona_Rescue_Assoc</value>
+      </item>
+      <item>
+        <label>Stowe Mountain Rescue</label>
+        <value>Stowe_Mtn_Rescue</value>
+      </item>
+      <item>
+        <label>Summit County Rescue Group</label>
+        <value>Summit_County_Rescue_Group</value>
+      </item>
+      <item>
+        <label>Tacoma Mountain Rescue Unit</label>
+        <value>Tacoma_Mtn_Rescue_Unit</value>
+      </item>
+      <item>
+        <label>Tehachapi Mountains Search &amp; Rescue</label>
+        <value>Tehachapi_Mtns_SAR</value>
+      </item>
+      <item>
+        <label>Teton County Search and Rescue</label>
+        <value>Teton_County_SAR</value>
+      </item>
+      <item>
+        <label>Tonto Rim Search and Rescue</label>
+        <value>Tonto_Rim_SAR</value>
+      </item>
+      <item>
+        <label>Utah County Sheriff's Search &amp; Rescue</label>
+        <value>Utah_County_Sheriff_SAR</value>
+      </item>
+      <item>
+        <label>Vail Mountain Rescue Group</label>
+        <value>Vail_Mtn_Rescue_Group</value>
+      </item>
+      <item>
+        <label>Ventura County Sheriff Search &amp; Rescue</label>
+        <value>Ventura_County_Sheriff_SAR</value>
+      </item>
+      <item>
+        <label>Vermont Department of Public Safety</label>
+        <value>Vermont_Dept_Public_Safety</value>
+      </item>
+      <item>
+        <label>Volcano Rescue Team</label>
+        <value>Volcano_Rescue_Team</value>
+      </item>
+      <item>
+        <label>Weber County Sheriff Mountain Rescue</label>
+        <value>Weber_County_Sheriff_Mtn_Rescue</value>
+      </item>
+      <item>
+        <label>West Valley Search &amp; Rescue</label>
+        <value>West_Valley_SAR</value>
+      </item>
+      <item>
+        <label>Western State Colorado University Mountain Rescue Team</label>
+        <value>West_State_Colorado_U_Mtn_Resc</value>
+      </item>
+      <item>
+        <label>Wrightwood/Phelan Search &amp; Rescue</label>
+        <value>Wrightwood/Phelan_SAR</value>
+      </item>
+      <item>
+        <label>Team Not Listed</label>
+        <value>Team_Not_Listed</value>
+      </item>
+    </select1>
+    <input ref="/Mission_Data_2018/Team_Not_Listed">
+      <label>Team Name If Not Listed</label>
+    </input>
+    <group ref="/Mission_Data_2018/Incident">
+      <label>Incident Information</label>
+      <input ref="/Mission_Data_2018/Incident/Incident_Number">
+        <label>Incident Number</label>
+        <hint>Please enter the mission number or short name your team uses.</hint>
+      </input>
+      <select1 ref="/Mission_Data_2018/Incident/Mutual_Aid">
+        <label>Was this a Mutual Aid incident?</label>
+        <item>
+          <label>Yes</label>
+          <value>YES</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>NO</value>
+        </item>
+      </select1>
+      <input ref="/Mission_Data_2018/Incident/Mutual_Aid_Number">
+        <label>Mutual Aid or State Number</label>
+        <hint>(if applicable)</hint>
+      </input>
+      <select1 ref="/Mission_Data_2018/Incident/Lead_Agency">
+        <label>Lead Agency</label>
+        <hint>Was your team the lead agency?</hint>
+        <item>
+          <label>Yes</label>
+          <value>YES</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>NO</value>
+        </item>
+      </select1>
+      <select1 appearance="autocomplete" ref="/Mission_Data_2018/Incident/Type">
+        <label>Type of Incident</label>
+        <hint>Please choose from the list (e.g. Search, Rescue, Training, etc.) or start typing.</hint>
+        <item>
+          <label>Aircraft Down/ELT Activation</label>
+          <value>AIRCRAFT_DOWN/ELT_ACTIVATION</value>
+        </item>
+        <item>
+          <label>Avalanche</label>
+          <value>AVALANCHE</value>
+        </item>
+        <item>
+          <label>Cave Search/Rescue</label>
+          <value>CAVE_SEARCH/RESCUE</value>
+        </item>
+        <item>
+          <label>Disaster - Other</label>
+          <value>DISASTER-OTHER</value>
+        </item>
+        <item>
+          <label>Dive Rescue/Recovery</label>
+          <value>DIVE_RESCUE/RECOVERY</value>
+        </item>
+        <item>
+          <label>Earthquake</label>
+          <value>EARTHQUAKE</value>
+        </item>
+        <item>
+          <label>Evidence Search</label>
+          <value>EVIDENCE_SEARCH</value>
+        </item>
+        <item>
+          <label>Fire</label>
+          <value>FIRE</value>
+        </item>
+        <item>
+          <label>Flood</label>
+          <value>FLOOD</value>
+        </item>
+        <item>
+          <label>Law Enforcement Activity</label>
+          <value>LAW_ENFORCEMENT_ACTIVITY</value>
+        </item>
+        <item>
+          <label>Medical Aid</label>
+          <value>MEDICAL_AID</value>
+        </item>
+        <item>
+          <label>Mine Search/Rescue</label>
+          <value>MINE_SEARCH/RESCUE</value>
+        </item>
+        <item>
+          <label>PLB Activation</label>
+          <value>PLB_ACTIVATION</value>
+        </item>
+        <item>
+          <label>Public Relations/PSAR Event</label>
+          <value>PUBLIC_RELATIONS/PSAR_EVENT</value>
+        </item>
+        <item>
+          <label>Recovery</label>
+          <value>RECOVERY</value>
+        </item>
+        <item>
+          <label>Rescue</label>
+          <value>RESCUE</value>
+        </item>
+        <item>
+          <label>Search</label>
+          <value>SEARCH</value>
+        </item>
+        <item>
+          <label>SEND Activation</label>
+          <value>SEND_ACTIVATION</value>
+        </item>
+        <item>
+          <label>Swiftwater Rescue</label>
+          <value>SWIFTWATER_RESCUE</value>
+        </item>
+        <item>
+          <label>Training</label>
+          <value>TRAINING</value>
+        </item>
+      </select1>
+      <input ref="/Mission_Data_2018/Incident/Training_Type">
+        <label>Type of Training</label>
+        <hint>Please specify what type of training.</hint>
+      </input>
+      <select1 ref="/Mission_Data_2018/Incident/Accidental_Transmitter">
+        <label>Was The Transmitter Accidentally Activated?</label>
+        <hint>Indicate whether the PLB, ELT, or Send device was accidentally activated.</hint>
+        <item>
+          <label>Yes</label>
+          <value>YES</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>NO</value>
+        </item>
+      </select1>
+      <input ref="/Mission_Data_2018/Incident/Date">
+        <label>Incident Start Date and Time</label>
+        <hint>Choose an approximate time when the mission was initiated (Earliest action recorded, e.g. 911 phone call, team callout, etc.)</hint>
+      </input>
+      <input ref="/Mission_Data_2018/Incident/Operational_Periods">
+        <label>Number of Operational Periods</label>
+      </input>
+      <select1 ref="/Mission_Data_2018/Incident/Primary_Area">
+        <label>Primary Response Area</label>
+        <hint>Was the incident in your primary response area?</hint>
+        <item>
+          <label>Yes</label>
+          <value>YES</value>
+        </item>
+        <item>
+          <label>No</label>
+          <value>NO</value>
+        </item>
+      </select1>
+      <input ref="/Mission_Data_2018/Incident/geometry">
+        <label>Initial Planning Point</label>
+        <hint>For most missions this is the single best available location where the victim is injured, rescued, or contacted (whichever happened first chronologically and you have an accurate location for). For search operations this is the initial planning point (point last seen or last known point) and then a subsequent 'Found' location is mapped near the end of this survey. &lt;br&gt;&lt;br&gt;The map pin will stay centered; please drag and zoom the map to position it.&lt;br&gt;&lt;br&gt;
+Click on the green map pin icon below the map to change coordinate notation. MGRS is the same as USNG for the purposes of this form. &lt;br&gt;&lt;br&gt;Please leave the altitude field blank. &lt;br&gt;</hint>
+      </input>
+      <group ref="/Mission_Data_2018/Incident/Personnel_Group">
+        <label>Personnel</label>
+        <input ref="/Mission_Data_2018/Incident/Personnel_Group/Number_Volunteers">
+          <label>Number of Volunteers Supporting the Incident</label>
+          <hint>Estimate the number of volunteer personnel involved (from your team only)</hint>
+        </input>
+        <input ref="/Mission_Data_2018/Incident/Personnel_Group/Total_Hours">
+          <label>Total Volunteer Hours on the Incident</label>
+          <hint>Estimate and enter a number of volunteer hours (for your team only). This should be at least the length of the operation (hours) multiplied by the number of members that were present for the whole mission.</hint>
+        </input>
+        <input ref="/Mission_Data_2018/Incident/Personnel_Group/Mileage">
+          <label>Total Volunteer Mileage</label>
+          <hint>Estimate the total miles driven by volunteers on this incident.</hint>
+        </input>
+        <input ref="/Mission_Data_2018/Incident/Personnel_Group/Total_Paid_Hours">
+          <label>Total Paid Staff Hours on the Incident</label>
+          <hint>Estimate and enter a number for total paid staff hours. This should be at least the length of the operation (hours) multiplied by the number of members that were present for the whole mission.</hint>
+        </input>
+      </group>
+      <group ref="/Mission_Data_2018/Incident/Incident_Assets_Group">
+        <label>Incident Assets</label>
+        <select ref="/Mission_Data_2018/Incident/Incident_Assets_Group/Aircraft_Used">
+          <label>Aircraft Used</label>
+          <hint>Indicate any aircraft used for this incident.</hint>
+          <item>
+            <label>Aircraft-Fixed Wing</label>
+            <value>AIRCRAFT-FIXED_WING</value>
+          </item>
+          <item>
+            <label>Aircraft-Helicopter</label>
+            <value>AIRCRAFT-HELICOPTER</value>
+          </item>
+          <item>
+            <label>Aircraft-UAV</label>
+            <value>AIRCRAFT-UAV</value>
+          </item>
+        </select>
+        <input ref="/Mission_Data_2018/Incident/Incident_Assets_Group/Aircraft_Hours">
+          <label>Aircraft Hours</label>
+          <hint>Estimate the number of flight hours.</hint>
+        </input>
+        <select1 appearance="horizontal-compact" ref="/Mission_Data_2018/Incident/Incident_Assets_Group/Hoist_Used">
+          <label>Hoist Used</label>
+          <hint>Indicate if a helicopter hoist mechanism was used for this incident.</hint>
+          <item>
+            <label>Yes</label>
+            <value>YES</value>
+          </item>
+          <item>
+            <label>No</label>
+            <value>NO</value>
+          </item>
+        </select1>
+      </group>
+    </group>
+    <group ref="/Mission_Data_2018/Environment">
+      <label>Environment</label>
+      <select1 appearance="horizontal-compact" ref="/Mission_Data_2018/Environment/Area_Type">
+        <label>Area Type</label>
+        <hint>Please identify what general type of area this incident occurred in.</hint>
+        <item>
+          <label>Wilderness</label>
+          <value>WILDERNESS</value>
+        </item>
+        <item>
+          <label>Rural</label>
+          <value>RURAL</value>
+        </item>
+        <item>
+          <label>Suburban</label>
+          <value>SUBURBAN</value>
+        </item>
+        <item>
+          <label>Urban</label>
+          <value>URBAN</value>
+        </item>
+        <item>
+          <label>Water</label>
+          <value>WATER</value>
+        </item>
+        <item>
+          <label>Other</label>
+          <value>OTHER</value>
+        </item>
+      </select1>
+      <input ref="/Mission_Data_2018/Environment/Area_Type_Other">
+        <label>Specify Other Area Type</label>
+      </input>
+      <select1 appearance="horizontal-compact" ref="/Mission_Data_2018/Environment/Land_Ownership">
+        <label>Land Ownership</label>
+        <hint>Please identify what land ownership type this incident occurred in.</hint>
+        <item>
+          <label>BLM</label>
+          <value>BLM</value>
+        </item>
+        <item>
+          <label>City</label>
+          <value>CITY</value>
+        </item>
+        <item>
+          <label>County</label>
+          <value>COUNTY</value>
+        </item>
+        <item>
+          <label>Military</label>
+          <value>MILITARY</value>
+        </item>
+        <item>
+          <label>National Forest</label>
+          <value>NATIONAL_FOREST</value>
+        </item>
+        <item>
+          <label>National Park/Monument</label>
+          <value>NATIONAL_PARK/MONUMENT</value>
+        </item>
+        <item>
+          <label>Private</label>
+          <value>PRIVATE</value>
+        </item>
+        <item>
+          <label>State</label>
+          <value>STATE</value>
+        </item>
+        <item>
+          <label>Tribal</label>
+          <value>TRIBAL</value>
+        </item>
+        <item>
+          <label>Other</label>
+          <value>OTHER</value>
+        </item>
+      </select1>
+      <input ref="/Mission_Data_2018/Environment/Land_Ownership_Other">
+        <label>Specify Other Land Ownership</label>
+      </input>
+    </group>
+    <group ref="/Mission_Data_2018/Subjects">
+      <label>Subject Information</label>
+      <input appearance="spinner" ref="/Mission_Data_2018/Subjects/Number_Subjects">
+        <label>Total Number of Subjects</label>
+        <hint>Enter the total number of subjects needing assistance. For training missions without any real subjects, enter 0.</hint>
+      </input>
+      <select1 appearance="autocomplete" ref="/Mission_Data_2018/Subjects/Category">
+        <label>Subject Category</label>
+        <hint>Please choose the best category for the subject(s)</hint>
+        <item>
+          <label>Alzheimers/Dementia</label>
+          <value>ALZHEIMERS/DEMENTIA</value>
+        </item>
+        <item>
+          <label>Base Jumping</label>
+          <value>BASE_JUMPING</value>
+        </item>
+        <item>
+          <label>Biking</label>
+          <value>BIKING</value>
+        </item>
+        <item>
+          <label>Boating</label>
+          <value>BOATING</value>
+        </item>
+        <item>
+          <label>Bystander</label>
+          <value>BYSTANDER</value>
+        </item>
+        <item>
+          <label>Camping</label>
+          <value>CAMPING</value>
+        </item>
+        <item>
+          <label>Canoeing/Kayaking/Rafting</label>
+          <value>CANOEING/KAYAKING/RAFTING</value>
+        </item>
+        <item>
+          <label>Caving</label>
+          <value>CAVING</value>
+        </item>
+        <item>
+          <label>Child Age 0-15 (If No Other Category Applies)</label>
+          <value>CHILD_AGE_0-15</value>
+        </item>
+        <item>
+          <label>Climbing</label>
+          <value>CLIMBING</value>
+        </item>
+        <item>
+          <label>Despondent/Suicide</label>
+          <value>DESPONDENT/SUICIDE</value>
+        </item>
+        <item>
+          <label>Diminished Capacity: Other</label>
+          <value>DIMINISHED_CAPACITY:_OTHER</value>
+        </item>
+        <item>
+          <label>Driving</label>
+          <value>DRIVING</value>
+        </item>
+        <item>
+          <label>Fishing</label>
+          <value>FISHING</value>
+        </item>
+        <item>
+          <label>Flying</label>
+          <value>FLYING</value>
+        </item>
+        <item>
+          <label>Four Wheel Driving</label>
+          <value>FOUR_WHEEL_DRIVING</value>
+        </item>
+        <item>
+          <label>Gathering</label>
+          <value>GATHERING</value>
+        </item>
+        <item>
+          <label>Hiking</label>
+          <value>HIKING</value>
+        </item>
+        <item>
+          <label>Horseback Riding</label>
+          <value>HORSEBACK_RIDING</value>
+        </item>
+        <item>
+          <label>Hunting</label>
+          <value>HUNTING</value>
+        </item>
+        <item>
+          <label>Jogger/Runner</label>
+          <value>JOGGER/RUNNER</value>
+        </item>
+        <item>
+          <label>Mine Exploration</label>
+          <value>MINE_EXPLORATION</value>
+        </item>
+        <item>
+          <label>Motorcycling (Street)</label>
+          <value>MOTORCYCLING_(STREET)</value>
+        </item>
+        <item>
+          <label>Mountaineering</label>
+          <value>MOUNTAINEERING</value>
+        </item>
+        <item>
+          <label>OHV/ATV</label>
+          <value>OHV/ATV</value>
+        </item>
+        <item>
+          <label>Photography</label>
+          <value>PHOTOGRAPHY</value>
+        </item>
+        <item>
+          <label>Runaway</label>
+          <value>RUNAWAY</value>
+        </item>
+        <item>
+          <label>School/Education Program</label>
+          <value>SCHOOL/EDUCATION_PROGRAM</value>
+        </item>
+        <item>
+          <label>Snow Shoeing</label>
+          <value>SNOW_SHOEING</value>
+        </item>
+        <item>
+          <label>Snow Skiing</label>
+          <value>SNOW_SKIING</value>
+        </item>
+        <item>
+          <label>Snowboarding</label>
+          <value>SNOWBOARDING</value>
+        </item>
+        <item>
+          <label>Snowmobiling</label>
+          <value>SNOWMOBILING</value>
+        </item>
+        <item>
+          <label>Swimming</label>
+          <value>SWIMMING</value>
+        </item>
+        <item>
+          <label>Working</label>
+          <value>WORKING</value>
+        </item>
+        <item>
+          <label>Other</label>
+          <value>OTHER</value>
+        </item>
+      </select1>
+      <input ref="/Mission_Data_2018/Subjects/Category_Other">
+        <label>Please Specify Other Category</label>
+      </input>
+      <group ref="/Mission_Data_2018/Subjects/Subject_1">
+        <label>Subject 1</label>
+        <input ref="/Mission_Data_2018/Subjects/Subject_1/Age_Sub_1">
+          <label>Subject 1: Age</label>
+        </input>
+        <select1 ref="/Mission_Data_2018/Subjects/Subject_1/Gender_Sub_1">
+          <label>Subject 1: Gender</label>
+          <item>
+            <label>Male</label>
+            <value>MALE</value>
+          </item>
+          <item>
+            <label>Female</label>
+            <value>FEMALE</value>
+          </item>
+        </select1>
+        <select1 appearance="likert" ref="/Mission_Data_2018/Subjects/Subject_1/Fitness_Sub_1">
+          <label>Subject 1: Level of Fitness</label>
+          <item>
+            <label>Excellent</label>
+            <value>EXCELLENT</value>
+          </item>
+          <item>
+            <label>Good</label>
+            <value>GOOD</value>
+          </item>
+          <item>
+            <label>Fair</label>
+            <value>FAIR</value>
+          </item>
+          <item>
+            <label>Poor</label>
+            <value>POOR</value>
+          </item>
+          <item>
+            <label>Unknown</label>
+            <value>UNKNOWN</value>
+          </item>
+        </select1>
+        <select1 appearance="likert" ref="/Mission_Data_2018/Subjects/Subject_1/Experience_Sub_1">
+          <label>Subject 1: Level of Experience</label>
+          <item>
+            <label>Excellent</label>
+            <value>EXCELLENT</value>
+          </item>
+          <item>
+            <label>Good</label>
+            <value>GOOD</value>
+          </item>
+          <item>
+            <label>Fair</label>
+            <value>FAIR</value>
+          </item>
+          <item>
+            <label>Poor</label>
+            <value>POOR</value>
+          </item>
+          <item>
+            <label>Unknown</label>
+            <value>UNKNOWN</value>
+          </item>
+        </select1>
+        <select appearance="horizontal-compact" ref="/Mission_Data_2018/Subjects/Subject_1/Mental_Factor_Sub_1">
+          <label>Subject 1: Mental Factors</label>
+          <hint>Search Operations Only. These fields are used in missing person behavior statistics and can be helpful for reviewing your own missions and pre-planning.</hint>
+          <item>
+            <label>None</label>
+            <value>NONE</value>
+          </item>
+          <item>
+            <label>Substance Intoxication</label>
+            <value>SUBSTANCE_INTOXICATION</value>
+          </item>
+          <item>
+            <label>Autism</label>
+            <value>AUTISM</value>
+          </item>
+          <item>
+            <label>Alzheimers/Dementia</label>
+            <value>ALZHEIMERS/DEMENTIA</value>
+          </item>
+          <item>
+            <label>Intellectual Disability</label>
+            <value>INTELLECTUAL_DISABILITY</value>
+          </item>
+          <item>
+            <label>Mental Illness</label>
+            <value>MENTAL_ILLNESS</value>
+          </item>
+        </select>
+        <select1 appearance="likert" ref="/Mission_Data_2018/Subjects/Subject_1/Mental_Rating_Sub_1">
+          <label>Subject 1: Mental Rating</label>
+          <hint>Search Operations Only. These fields are used in missing person behavior statistics and can be helpful for reviewing your own missions and pre-planning.</hint>
+          <item>
+            <label>Normal</label>
+            <value>NORMAL</value>
+          </item>
+          <item>
+            <label>Mild</label>
+            <value>MILD</value>
+          </item>
+          <item>
+            <label>Moderate</label>
+            <value>MODERATE</value>
+          </item>
+          <item>
+            <label>Severe</label>
+            <value>SEVERE</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/Mission_Data_2018/Subjects/Subject_2">
+        <label>Subject 2</label>
+        <input ref="/Mission_Data_2018/Subjects/Subject_2/Age_Sub_2">
+          <label>Subject 2: Age</label>
+        </input>
+        <select1 ref="/Mission_Data_2018/Subjects/Subject_2/Gender_Sub_2">
+          <label>Subject 2: Gender</label>
+          <item>
+            <label>Male</label>
+            <value>MALE</value>
+          </item>
+          <item>
+            <label>Female</label>
+            <value>FEMALE</value>
+          </item>
+        </select1>
+        <select1 appearance="likert" ref="/Mission_Data_2018/Subjects/Subject_2/Fitness_Sub_2">
+          <label>Subject 2: Level of Fitness</label>
+          <item>
+            <label>Excellent</label>
+            <value>EXCELLENT</value>
+          </item>
+          <item>
+            <label>Good</label>
+            <value>GOOD</value>
+          </item>
+          <item>
+            <label>Fair</label>
+            <value>FAIR</value>
+          </item>
+          <item>
+            <label>Poor</label>
+            <value>POOR</value>
+          </item>
+          <item>
+            <label>Unknown</label>
+            <value>UNKNOWN</value>
+          </item>
+        </select1>
+        <select1 appearance="likert" ref="/Mission_Data_2018/Subjects/Subject_2/Experience_Sub_2">
+          <label>Subject 2: Level of Experience</label>
+          <item>
+            <label>Excellent</label>
+            <value>EXCELLENT</value>
+          </item>
+          <item>
+            <label>Good</label>
+            <value>GOOD</value>
+          </item>
+          <item>
+            <label>Fair</label>
+            <value>FAIR</value>
+          </item>
+          <item>
+            <label>Poor</label>
+            <value>POOR</value>
+          </item>
+          <item>
+            <label>Unknown</label>
+            <value>UNKNOWN</value>
+          </item>
+        </select1>
+        <select1 appearance="horizontal-compact" ref="/Mission_Data_2018/Subjects/Subject_2/Mental_Factor_Sub_2">
+          <label>Subject 2: Mental Factors</label>
+          <hint>Search Operations Only. These fields are used in missing person behavior statistics and can be helpful for reviewing your own missions and pre-planning.</hint>
+          <item>
+            <label>None</label>
+            <value>NONE</value>
+          </item>
+          <item>
+            <label>Substance Intoxication</label>
+            <value>SUBSTANCE_INTOXICATION</value>
+          </item>
+          <item>
+            <label>Autism</label>
+            <value>AUTISM</value>
+          </item>
+          <item>
+            <label>Alzheimers/Dementia</label>
+            <value>ALZHEIMERS/DEMENTIA</value>
+          </item>
+          <item>
+            <label>Intellectual Disability</label>
+            <value>INTELLECTUAL_DISABILITY</value>
+          </item>
+          <item>
+            <label>Mental Illness</label>
+            <value>MENTAL_ILLNESS</value>
+          </item>
+        </select1>
+        <select1 appearance="likert" ref="/Mission_Data_2018/Subjects/Subject_2/Mental_Rating_Sub_2">
+          <label>Subject 2: Mental Rating</label>
+          <hint>Search Operations Only. These fields are used in missing person behavior statistics and can be helpful for reviewing your own missions and pre-planning.</hint>
+          <item>
+            <label>Normal</label>
+            <value>NORMAL</value>
+          </item>
+          <item>
+            <label>Mild</label>
+            <value>MILD</value>
+          </item>
+          <item>
+            <label>Moderate</label>
+            <value>MODERATE</value>
+          </item>
+          <item>
+            <label>Severe</label>
+            <value>SEVERE</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/Mission_Data_2018/Subjects/Subject_3">
+        <label>Subject 3</label>
+        <input ref="/Mission_Data_2018/Subjects/Subject_3/Age_Sub_3">
+          <label>Subject 3: Age</label>
+        </input>
+        <select1 ref="/Mission_Data_2018/Subjects/Subject_3/Gender_Sub_3">
+          <label>Subject 3: Gender</label>
+          <item>
+            <label>Male</label>
+            <value>MALE</value>
+          </item>
+          <item>
+            <label>Female</label>
+            <value>FEMALE</value>
+          </item>
+        </select1>
+        <select1 appearance="likert" ref="/Mission_Data_2018/Subjects/Subject_3/Fitness_Sub_3">
+          <label>Subject 3: Level of Fitness</label>
+          <item>
+            <label>Excellent</label>
+            <value>EXCELLENT</value>
+          </item>
+          <item>
+            <label>Good</label>
+            <value>GOOD</value>
+          </item>
+          <item>
+            <label>Fair</label>
+            <value>FAIR</value>
+          </item>
+          <item>
+            <label>Poor</label>
+            <value>POOR</value>
+          </item>
+          <item>
+            <label>Unknown</label>
+            <value>UNKNOWN</value>
+          </item>
+        </select1>
+        <select1 appearance="likert" ref="/Mission_Data_2018/Subjects/Subject_3/Experience_Sub_3">
+          <label>Subject 3: Level of Experience</label>
+          <item>
+            <label>Excellent</label>
+            <value>EXCELLENT</value>
+          </item>
+          <item>
+            <label>Good</label>
+            <value>GOOD</value>
+          </item>
+          <item>
+            <label>Fair</label>
+            <value>FAIR</value>
+          </item>
+          <item>
+            <label>Poor</label>
+            <value>POOR</value>
+          </item>
+          <item>
+            <label>Unknown</label>
+            <value>UNKNOWN</value>
+          </item>
+        </select1>
+        <select1 appearance="horizontal-compact" ref="/Mission_Data_2018/Subjects/Subject_3/Mental_Factor_Sub_3">
+          <label>Subject 3: Mental Factors</label>
+          <hint>Search Operations Only. These fields are used in missing person behavior statistics and can be helpful for reviewing your own missions and pre-planning.</hint>
+          <item>
+            <label>None</label>
+            <value>NONE</value>
+          </item>
+          <item>
+            <label>Substance Intoxication</label>
+            <value>SUBSTANCE_INTOXICATION</value>
+          </item>
+          <item>
+            <label>Autism</label>
+            <value>AUTISM</value>
+          </item>
+          <item>
+            <label>Alzheimers/Dementia</label>
+            <value>ALZHEIMERS/DEMENTIA</value>
+          </item>
+          <item>
+            <label>Intellectual Disability</label>
+            <value>INTELLECTUAL_DISABILITY</value>
+          </item>
+          <item>
+            <label>Mental Illness</label>
+            <value>MENTAL_ILLNESS</value>
+          </item>
+        </select1>
+        <select1 appearance="likert" ref="/Mission_Data_2018/Subjects/Subject_3/Mental_Rating_Sub_3">
+          <label>Subject 3: Mental Rating</label>
+          <hint>Search Operations Only. These fields are used in missing person behavior statistics and can be helpful for reviewing your own missions and pre-planning.</hint>
+          <item>
+            <label>Normal</label>
+            <value>NORMAL</value>
+          </item>
+          <item>
+            <label>Mild</label>
+            <value>MILD</value>
+          </item>
+          <item>
+            <label>Moderate</label>
+            <value>MODERATE</value>
+          </item>
+          <item>
+            <label>Severe</label>
+            <value>SEVERE</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/Mission_Data_2018/Subjects/Subject_4">
+        <label>Subject 4</label>
+        <input ref="/Mission_Data_2018/Subjects/Subject_4/Age_Sub_4">
+          <label>Subject 4: Age</label>
+        </input>
+        <select1 ref="/Mission_Data_2018/Subjects/Subject_4/Gender_Sub_4">
+          <label>Subject 4: Gender</label>
+          <item>
+            <label>Male</label>
+            <value>MALE</value>
+          </item>
+          <item>
+            <label>Female</label>
+            <value>FEMALE</value>
+          </item>
+        </select1>
+        <select1 appearance="likert" ref="/Mission_Data_2018/Subjects/Subject_4/Fitness_Sub_4">
+          <label>Subject 4: Level of Fitness</label>
+          <item>
+            <label>Excellent</label>
+            <value>EXCELLENT</value>
+          </item>
+          <item>
+            <label>Good</label>
+            <value>GOOD</value>
+          </item>
+          <item>
+            <label>Fair</label>
+            <value>FAIR</value>
+          </item>
+          <item>
+            <label>Poor</label>
+            <value>POOR</value>
+          </item>
+          <item>
+            <label>Unknown</label>
+            <value>UNKNOWN</value>
+          </item>
+        </select1>
+        <select1 appearance="likert" ref="/Mission_Data_2018/Subjects/Subject_4/Experience_Sub_4">
+          <label>Subject 4: Level of Experience</label>
+          <item>
+            <label>Excellent</label>
+            <value>EXCELLENT</value>
+          </item>
+          <item>
+            <label>Good</label>
+            <value>GOOD</value>
+          </item>
+          <item>
+            <label>Fair</label>
+            <value>FAIR</value>
+          </item>
+          <item>
+            <label>Poor</label>
+            <value>POOR</value>
+          </item>
+          <item>
+            <label>Unknown</label>
+            <value>UNKNOWN</value>
+          </item>
+        </select1>
+        <select1 appearance="horizontal-compact" ref="/Mission_Data_2018/Subjects/Subject_4/Mental_Factor_Sub_4">
+          <label>Subject 4: Mental Factors</label>
+          <hint>Search Operations Only. These fields are used in missing person behavior statistics and can be helpful for reviewing your own missions and pre-planning.</hint>
+          <item>
+            <label>None</label>
+            <value>NONE</value>
+          </item>
+          <item>
+            <label>Substance Intoxication</label>
+            <value>SUBSTANCE_INTOXICATION</value>
+          </item>
+          <item>
+            <label>Autism</label>
+            <value>AUTISM</value>
+          </item>
+          <item>
+            <label>Alzheimers/Dementia</label>
+            <value>ALZHEIMERS/DEMENTIA</value>
+          </item>
+          <item>
+            <label>Intellectual Disability</label>
+            <value>INTELLECTUAL_DISABILITY</value>
+          </item>
+          <item>
+            <label>Mental Illness</label>
+            <value>MENTAL_ILLNESS</value>
+          </item>
+        </select1>
+        <select1 appearance="likert" ref="/Mission_Data_2018/Subjects/Subject_4/Mental_Rating_Sub_4">
+          <label>Subject 4: Mental Rating</label>
+          <hint>Search Operations Only. These fields are used in missing person behavior statistics and can be helpful for reviewing your own missions and pre-planning.</hint>
+          <item>
+            <label>Normal</label>
+            <value>NORMAL</value>
+          </item>
+          <item>
+            <label>Mild</label>
+            <value>MILD</value>
+          </item>
+          <item>
+            <label>Moderate</label>
+            <value>MODERATE</value>
+          </item>
+          <item>
+            <label>Severe</label>
+            <value>SEVERE</value>
+          </item>
+        </select1>
+      </group>
+      <group ref="/Mission_Data_2018/Subjects/Subject_5">
+        <label>Subject 5</label>
+        <input ref="/Mission_Data_2018/Subjects/Subject_5/Age_Sub_5">
+          <label>Subject 5: Age</label>
+        </input>
+        <select1 ref="/Mission_Data_2018/Subjects/Subject_5/Gender_Sub_5">
+          <label>Subject 5: Gender</label>
+          <item>
+            <label>Male</label>
+            <value>MALE</value>
+          </item>
+          <item>
+            <label>Female</label>
+            <value>FEMALE</value>
+          </item>
+        </select1>
+        <select1 appearance="likert" ref="/Mission_Data_2018/Subjects/Subject_5/Fitness_Sub_5">
+          <label>Subject 5: Level of Fitness</label>
+          <item>
+            <label>Excellent</label>
+            <value>EXCELLENT</value>
+          </item>
+          <item>
+            <label>Good</label>
+            <value>GOOD</value>
+          </item>
+          <item>
+            <label>Fair</label>
+            <value>FAIR</value>
+          </item>
+          <item>
+            <label>Poor</label>
+            <value>POOR</value>
+          </item>
+          <item>
+            <label>Unknown</label>
+            <value>UNKNOWN</value>
+          </item>
+        </select1>
+        <select1 appearance="likert" ref="/Mission_Data_2018/Subjects/Subject_5/Experience_Sub_5">
+          <label>Subject 5: Level of Experience</label>
+          <item>
+            <label>Excellent</label>
+            <value>EXCELLENT</value>
+          </item>
+          <item>
+            <label>Good</label>
+            <value>GOOD</value>
+          </item>
+          <item>
+            <label>Fair</label>
+            <value>FAIR</value>
+          </item>
+          <item>
+            <label>Poor</label>
+            <value>POOR</value>
+          </item>
+          <item>
+            <label>Unknown</label>
+            <value>UNKNOWN</value>
+          </item>
+        </select1>
+        <select1 appearance="horizontal-compact" ref="/Mission_Data_2018/Subjects/Subject_5/Mental_Factor_Sub_5">
+          <label>Subject 5: Mental Factors</label>
+          <hint>Search Operations Only. These fields are used in missing person behavior statistics and can be helpful for reviewing your own missions and pre-planning.</hint>
+          <item>
+            <label>None</label>
+            <value>NONE</value>
+          </item>
+          <item>
+            <label>Substance Intoxication</label>
+            <value>SUBSTANCE_INTOXICATION</value>
+          </item>
+          <item>
+            <label>Autism</label>
+            <value>AUTISM</value>
+          </item>
+          <item>
+            <label>Alzheimers/Dementia</label>
+            <value>ALZHEIMERS/DEMENTIA</value>
+          </item>
+          <item>
+            <label>Intellectual Disability</label>
+            <value>INTELLECTUAL_DISABILITY</value>
+          </item>
+          <item>
+            <label>Mental Illness</label>
+            <value>MENTAL_ILLNESS</value>
+          </item>
+        </select1>
+        <select1 appearance="likert" ref="/Mission_Data_2018/Subjects/Subject_5/Mental_Rating_Sub_5">
+          <label>Subject 5: Mental Rating</label>
+          <hint>Search Operations Only. These fields are used in missing person behavior statistics and can be helpful for reviewing your own missions and pre-planning.</hint>
+          <item>
+            <label>Normal</label>
+            <value>NORMAL</value>
+          </item>
+          <item>
+            <label>Mild</label>
+            <value>MILD</value>
+          </item>
+          <item>
+            <label>Moderate</label>
+            <value>MODERATE</value>
+          </item>
+          <item>
+            <label>Severe</label>
+            <value>SEVERE</value>
+          </item>
+        </select1>
+      </group>
+      <input appearance="multiline" ref="/Mission_Data_2018/Subjects/Group_Specifics">
+        <label>Group Specifics</label>
+        <hint>For a group of more than 5 subjects, please describe relevant ages, gender, fitness, experience, responsiveness, mobility, and mental factors.</hint>
+      </input>
+    </group>
+    <group ref="/Mission_Data_2018/Incident_Outcomes">
+      <label>Incident Outcomes</label>
+      <input appearance="spinner" ref="/Mission_Data_2018/Incident_Outcomes/Number_Sub_Well">
+        <label>Number of Subjects Found Alive and Well</label>
+        <hint>Subjects found in good physical condition</hint>
+      </input>
+      <input appearance="spinner" ref="/Mission_Data_2018/Incident_Outcomes/Number_Sub_Ill_Injured">
+        <label>Number of Subjects Found Ill or Injured</label>
+        <hint>Indicate injury and illness details in the next section.</hint>
+      </input>
+      <input appearance="spinner" ref="/Mission_Data_2018/Incident_Outcomes/Number_Sub_DOA">
+        <label>Number of Subjects Found DOA</label>
+        <hint>Subjects found deceased</hint>
+      </input>
+      <input appearance="spinner" ref="/Mission_Data_2018/Incident_Outcomes/Number_Sub_Not_Found">
+        <label>Number of Subjects Not Found</label>
+      </input>
+      <group ref="/Mission_Data_2018/Incident_Outcomes/Outcome_Locations_Group">
+        <label>Outcome Location(s)</label>
+        <input ref="/Mission_Data_2018/Incident_Outcomes/Outcome_Locations_Group/Number_Found_Locations">
+          <label>How Many 'Found' Locations?</label>
+          <hint>Search Operations or Transmitter Activations Only. Please indicate how many separate 'found' locations you would like to record.</hint>
+        </input>
+        <group ref="/Mission_Data_2018/Incident_Outcomes/Outcome_Locations_Group/Point_Found">
+          <label>Found Location</label>
+          <repeat jr:count=" /Mission_Data_2018/Incident_Outcomes/Outcome_Locations_Group/Point_Found_count " nodeset="/Mission_Data_2018/Incident_Outcomes/Outcome_Locations_Group/Point_Found">
+            <input ref="/Mission_Data_2018/Incident_Outcomes/Outcome_Locations_Group/Point_Found/Found_Location">
+              <label>Subject(s) Found</label>
+              <hint>The location where the subject(s) were found. &lt;br&gt;&lt;br&gt;The map pin will stay centered; please drag and zoom the map to position it.&lt;br&gt;&lt;br&gt;
+Click on the green map pin icon below the map to change coordinate notation. MGRS is the same as USNG for the purposes of this form. &lt;br&gt;&lt;br&gt;Please leave the altitude field blank. &lt;br&gt;</hint>
+            </input>
+            <select ref="/Mission_Data_2018/Incident_Outcomes/Outcome_Locations_Group/Point_Found/How_Found">
+              <label>How Were the Subject(s) Found?</label>
+              <hint>For subjects in this location, check all that apply.</hint>
+              <item>
+                <label>Aircraft-Fixed Wing</label>
+                <value>AIRCRAFT-FIXED_WING</value>
+              </item>
+              <item>
+                <label>Aircraft-Helicopter</label>
+                <value>AIRCRAFT-HELICOPTER</value>
+              </item>
+              <item>
+                <label>Aircraft-UAV</label>
+                <value>AIRCRAFT-UAV</value>
+              </item>
+              <item>
+                <label>Attraction</label>
+                <value>ATTRACTION</value>
+              </item>
+              <item>
+                <label>Boat</label>
+                <value>BOAT</value>
+              </item>
+              <item>
+                <label>Boat-Sonar</label>
+                <value>BOAT-SONAR</value>
+              </item>
+              <item>
+                <label>Cave Team</label>
+                <value>CAVE_TEAM</value>
+              </item>
+              <item>
+                <label>Cell Phone Tower</label>
+                <value>CELL_PHONE_TOWER</value>
+              </item>
+              <item>
+                <label>Confinement</label>
+                <value>CONFINEMENT</value>
+              </item>
+              <item>
+                <label>Convergent Volunteer</label>
+                <value>CONVERGENT_VOLUNTEER</value>
+              </item>
+              <item>
+                <label>Dive Team</label>
+                <value>DIVE_TEAM</value>
+              </item>
+              <item>
+                <label>Electronic Direction Finding</label>
+                <value>ELECTRONIC_DIRECTION_FINDING</value>
+              </item>
+              <item>
+                <label>Family/Friends</label>
+                <value>FAMILY/FRIENDS</value>
+              </item>
+              <item>
+                <label>Grid Search</label>
+                <value>GRID_SEARCH</value>
+              </item>
+              <item>
+                <label>Ground Team</label>
+                <value>GROUND_TEAM</value>
+              </item>
+              <item>
+                <label>Investigative</label>
+                <value>INVESTIGATIVE</value>
+              </item>
+              <item>
+                <label>K9 Team</label>
+                <value>K9_TEAM</value>
+              </item>
+              <item>
+                <label>K9-Air Scent</label>
+                <value>K9-AIR_SCENT</value>
+              </item>
+              <item>
+                <label>K9-Disaster</label>
+                <value>K9-DISASTER</value>
+              </item>
+              <item>
+                <label>K9-HRD</label>
+                <value>K9-HRD</value>
+              </item>
+              <item>
+                <label>K9-Tracking/Trailing</label>
+                <value>K9-TRACKING/TRAILING</value>
+              </item>
+              <item>
+                <label>Mine Team</label>
+                <value>MINE_TEAM</value>
+              </item>
+              <item>
+                <label>Mounted Team</label>
+                <value>MOUNTED_TEAM</value>
+              </item>
+              <item>
+                <label>OHV Team</label>
+                <value>OHV_TEAM</value>
+              </item>
+              <item>
+                <label>Passerby</label>
+                <value>PASSERBY</value>
+              </item>
+              <item>
+                <label>Patrol</label>
+                <value>PATROL</value>
+              </item>
+              <item>
+                <label>Search Suspended</label>
+                <value>SEARCH_SUSPENDED</value>
+              </item>
+              <item>
+                <label>Self-Rescued</label>
+                <value>SELF-RESCUED</value>
+              </item>
+              <item>
+                <label>Swift Water Team</label>
+                <value>SWIFT_WATER_TEAM</value>
+              </item>
+              <item>
+                <label>Tech Rescue Team</label>
+                <value>TECH_RESCUE_TEAM</value>
+              </item>
+              <item>
+                <label>Tracking Team</label>
+                <value>TRACKING_TEAM</value>
+              </item>
+              <item>
+                <label>Other</label>
+                <value>OTHER</value>
+              </item>
+            </select>
+            <input ref="/Mission_Data_2018/Incident_Outcomes/Outcome_Locations_Group/Point_Found/How_Found_Other">
+              <label>Specify Other for How Subject(s) Were Found</label>
+              <hint>Please specify how subject(s) were found.</hint>
+            </input>
+            <select ref="/Mission_Data_2018/Incident_Outcomes/Outcome_Locations_Group/Point_Found/Mobility_Responsiveness">
+              <label>Subject Mobility and Responsiveness</label>
+              <hint>Were subjects in this location responsive to rescuers and able to travel? Check all that apply.</hint>
+              <item>
+                <label>Mobile and Responsive</label>
+                <value>Mobile_and_Responsive</value>
+              </item>
+              <item>
+                <label>Mobile and Unresponsive</label>
+                <value>Mobile_and_Unresponsive</value>
+              </item>
+              <item>
+                <label>Immobile and Responsive</label>
+                <value>Immobile_and_Responsive</value>
+              </item>
+              <item>
+                <label>Immobile and Unresponsive</label>
+                <value>Immobile_and_Unresponsive</value>
+              </item>
+            </select>
+          </repeat>
+        </group>
+      </group>
+      <group ref="/Mission_Data_2018/Incident_Outcomes/Medical_Group">
+        <label>Medical</label>
+        <select1 appearance="likert" ref="/Mission_Data_2018/Incident_Outcomes/Medical_Group/Level_of_Care_Subject">
+          <label>Level of Care Provided to Subject(s)</label>
+          <item>
+            <label>None</label>
+            <value>NONE</value>
+          </item>
+          <item>
+            <label>First Aid</label>
+            <value>FIRST_AID</value>
+          </item>
+          <item>
+            <label>BLS</label>
+            <value>BLS</value>
+          </item>
+          <item>
+            <label>ALS</label>
+            <value>ALS</value>
+          </item>
+          <item>
+            <label>Fatal</label>
+            <value>FATAL</value>
+          </item>
+        </select1>
+        <select ref="/Mission_Data_2018/Incident_Outcomes/Medical_Group/Medical_Problems_Subject">
+          <label>Medical Problems: Subject(s)</label>
+          <hint>Indicate medical problems encountered with the subject(s). If applicable, check all that apply.</hint>
+          <item>
+            <label>Trauma: Head</label>
+            <value>Trauma_Head</value>
+          </item>
+          <item>
+            <label>Trauma: Spine</label>
+            <value>Trauma_Spine</value>
+          </item>
+          <item>
+            <label>Trauma: Chest</label>
+            <value>Trauma_Chest</value>
+          </item>
+          <item>
+            <label>Trauma: Abdomen</label>
+            <value>Trauma_Abdomen</value>
+          </item>
+          <item>
+            <label>Trauma: Pelvis</label>
+            <value>Trauma_Pelvis</value>
+          </item>
+          <item>
+            <label>Trauma: Extremities</label>
+            <value>Trauma_Extremities</value>
+          </item>
+          <item>
+            <label>Illness: Environmental (e.g., hypothermia, heat-related)</label>
+            <value>Illness_Environmental</value>
+          </item>
+          <item>
+            <label>Illness: Altitude-Related</label>
+            <value>Illness_Altitude</value>
+          </item>
+          <item>
+            <label>Illness: Cardiac</label>
+            <value>Illness_Cardiac</value>
+          </item>
+          <item>
+            <label>Illness: Drug or Alcohol</label>
+            <value>Illness_Drug</value>
+          </item>
+          <item>
+            <label>Other</label>
+            <value>OTHER</value>
+          </item>
+        </select>
+        <input ref="/Mission_Data_2018/Incident_Outcomes/Medical_Group/Medical_Problems_Other_Subject">
+          <label>Specify Other Medical Problems: Subject(s)</label>
+          <hint>Specify other medical problems with the subject.</hint>
+        </input>
+        <input appearance="spinner" ref="/Mission_Data_2018/Incident_Outcomes/Medical_Group/Number_Tm_Injured">
+          <label>Number of Team Members Injured or Ill</label>
+          <hint>If applicable, indicate the number of team members injured or needing medical attention during this incident.</hint>
+        </input>
+        <select1 appearance="likert" ref="/Mission_Data_2018/Incident_Outcomes/Medical_Group/Level_of_Care_Rescuer">
+          <label>Level of Care Provided to Rescuer(s)</label>
+          <item>
+            <label>None</label>
+            <value>NONE</value>
+          </item>
+          <item>
+            <label>First Aid</label>
+            <value>FIRST_AID</value>
+          </item>
+          <item>
+            <label>BLS</label>
+            <value>BLS</value>
+          </item>
+          <item>
+            <label>ALS</label>
+            <value>ALS</value>
+          </item>
+          <item>
+            <label>Fatal</label>
+            <value>FATAL</value>
+          </item>
+        </select1>
+        <select ref="/Mission_Data_2018/Incident_Outcomes/Medical_Group/Medical_Problems_Team_Member">
+          <label>Medical Problems: Team Member(s)</label>
+          <hint>Indicate medical problems encountered with the team member(s). If applicable, check all that apply.</hint>
+          <item>
+            <label>Trauma: Head</label>
+            <value>Trauma_Head</value>
+          </item>
+          <item>
+            <label>Trauma: Spine</label>
+            <value>Trauma_Spine</value>
+          </item>
+          <item>
+            <label>Trauma: Chest</label>
+            <value>Trauma_Chest</value>
+          </item>
+          <item>
+            <label>Trauma: Abdomen</label>
+            <value>Trauma_Abdomen</value>
+          </item>
+          <item>
+            <label>Trauma: Pelvis</label>
+            <value>Trauma_Pelvis</value>
+          </item>
+          <item>
+            <label>Trauma: Extremities</label>
+            <value>Trauma_Extremities</value>
+          </item>
+          <item>
+            <label>Illness: Environmental (e.g., hypothermia, heat-related)</label>
+            <value>Illness_Environmental</value>
+          </item>
+          <item>
+            <label>Illness: Altitude-Related</label>
+            <value>Illness_Altitude</value>
+          </item>
+          <item>
+            <label>Illness: Cardiac</label>
+            <value>Illness_Cardiac</value>
+          </item>
+          <item>
+            <label>Illness: Drug or Alcohol</label>
+            <value>Illness_Drug</value>
+          </item>
+          <item>
+            <label>Other</label>
+            <value>OTHER</value>
+          </item>
+        </select>
+        <input ref="/Mission_Data_2018/Incident_Outcomes/Medical_Group/Medical_Problems_Other_Team_Member">
+          <label>Specify Other Medical Problems: Team Member(s)</label>
+          <hint>Specify other medical problems with the team member.</hint>
+        </input>
+        <select ref="/Mission_Data_2018/Incident_Outcomes/Medical_Group/Medical_Provider">
+          <label>Medical Provider</label>
+          <item>
+            <label>None</label>
+            <value>None</value>
+          </item>
+          <item>
+            <label>SAR team member</label>
+            <value>SAR_team</value>
+          </item>
+          <item>
+            <label>Local EMS</label>
+            <value>Local_EMS</value>
+          </item>
+          <item>
+            <label>Local fire department</label>
+            <value>Local_Fire</value>
+          </item>
+          <item>
+            <label>Other</label>
+            <value>Other</value>
+          </item>
+        </select>
+        <input ref="/Mission_Data_2018/Incident_Outcomes/Medical_Group/Medical_Provider_Other">
+          <label>Specify Other Medical Provider</label>
+        </input>
+      </group>
+    </group>
+    <group ref="/Mission_Data_2018/Comments">
+      <label>Overall Incident Comments</label>
+      <input appearance="multiline" ref="/Mission_Data_2018/Comments/Comments">
+        <label>Comments</label>
+        <hint>Please provide any additional narrative or notes that are important to your team.</hint>
+      </input>
+      <input ref="/Mission_Data_2018/Comments/generated_note_name_142">
+        <label>Sending data may take a few seconds after you click 'submit'</label>
+      </input>
+    </group>
+  </h:body>
+</h:html>

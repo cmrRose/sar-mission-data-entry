@@ -1,0 +1,86 @@
+Region,ShortName,Label,Lat,Lon,County
+Alaska Region,Alaska_Mtn_Rescue_Group,Alaska Mountain Rescue Group,61.18558908,-149.8832688,Anchorage County - Alaska
+Rocky Mountain Region,Albuquerque_Mtn_Rescue_Council,Albuquerque Mountain Rescue Council,35.09968377,-106.5171071,Bernalillo County - New Mexico
+Appalachian Region,Allegheny_Mtn_Rescue_Group,Allegheny Mountain Rescue Group,40.43686021,-79.98657581,Allegheny County - Pennsylvania
+Rocky Mountain Region,Alpine_Rescue_Team,Alpine Rescue Team,39.63845045,-105.3497562,Jefferson County - Colorado
+California Region,Altadena_Mountain_Rescue_Team,Altadena Mountain Rescue Team,34.189741,-118.132047,Los Angeles County - California
+Appalachian Region,Appalachian_Mtn_Rescue_Team,Appalachian Mountain Rescue Team,35.589568,-82.562953,Buncombe County - North Carolina
+Rocky Mountain Region,Atalaya_SAR,Atalaya Search and Rescue Team,35.69349395,-105.9489977,Santa Fe County - New Mexico
+California Region,Bay_Area_Mtn_Rescue_Team,Bay Area Mountain Rescue Team,37.4460215,-122.1593399,Santa Clara County - California
+Washington Region,Bellingham_Mtn_Rescue_Council,Bellingham Mountain Rescue Council,48.74350941,-122.4885392,Whatcom County - Washington
+Appalachian Region,Blue_Knob_Ski_Patrol,Blue Knob Ski Patrol,40.28374025,-78.495667,Blair County - Pennsylvania
+Inter-Mountain Region,Cache_County_Sheriffs_SAR,Cache County Sheriff's Search & Rescue,41.73537202,-111.8409146,Cache County - Utah
+Desert Region,Central_Arizona_MRA,Central Arizona Mountain Rescue Association,33.542725,-112.084119,Maricopa County - Arizona
+Washington Region,Central_Washington_Mtn_Rescue,Central Washington Mountain Rescue,46.60145645,-120.5024459,Yakima County - Washington
+Rocky Mountain Region,Chaffee_County_SAR_North,Chaffee County SAR North,38.85278221,-106.165279,Chaffee County - Colorado
+Appalachian Region,Chattanooga-Hamilton_Co_Resc,Chattanooga-Hamilton County Rescue Service,35.02321098,-85.19705062,Hamilton County - Tennessee
+California Region,China_Lake_Mtn_Rescue_Group,China Lake Mountain Rescue Group,35.62791043,-117.6698064,Kern County - California
+Desert Region,Coconino_Co_Sheriffs_SAR_Unit,Coconino County Sheriff's Search & Rescue,35.18881351,-111.6419742,Coconino County - Arizona
+California Region,Contra_Costa_Co_Sheriffs_SAR,Contra Costa County Sheriff's Search and Rescue,37.98980339,-122.0873125,Contra Costa County - California
+Oregon Region,Corvallis_Mtn_Rescue_Unit,Corvallis Mountain Rescue Unit,44.56196736,-123.2608596,Benton County - Oregon
+Rocky Mountain Region,Crested_Butte_SAR,Crested Butte Search and Rescue,38.873494,-106.977746,Gunnison County - Colorado
+Inter-Mountain Region,Davis_County_Sheriffs_SAR,Davis County Sheriff's Search & Rescue,40.98635371,-111.8995479,Davis County - Utah
+Oregon Region,Deschutes_County_SAR,Deschutes County Search & Rescue,44.10060122,-121.3048173,Deschutes County - Oregon
+Rocky Mountain Region,Douglas_County_SAR_CO,Douglas County Search & Rescue Colorado,39.36739162,-104.8380493,Douglas County - Colorado
+California Region,Douglas_County_SAR_Nevada,Douglas County Search & Rescue Nevada,38.9996825,-119.7585071,Douglas County - Nevada
+Rocky Mountain Region,El_Paso_County_SAR,El Paso County Search & Rescue,38.88858445,-104.8306752,El Paso County - Colorado
+Oregon Region,Eugene_Mtn_Rescue,Eugene Mountain Rescue,44.03845051,-123.0802674,Lane County - Oregon
+Washington Region,Everett_Mtn_Rescue_Unit,Everett Mountain Rescue Unit,47.94636959,-122.0785778,Snohomish County - Washington
+California Region,Fillmore_SAR,Fillmore Search and Rescue,34.39896388,-118.9183441,Ventura County - California
+Rocky Mountain Region,Fremont_SAR,Fremont Search and Rescue,38.44700967,-105.1831896,Fremont County - Colorado
+California Region,Fresno_Co_Sheriffs_SAR_Mtneering,Fresno County Sheriff's Search & Rescue Mountaineering Team,36.75777263,-119.7799584,Fresno County - California
+Rocky Mountain Region,Garfield_County_SAR,Garfield County Search and Rescue,39.52427594,-107.7551848,Garfield County - Colorado
+Rocky Mountain Region,Grand_County_SAR,Grand County Search and Rescue,39.88152302,-105.7553589,Grand County - Colorado
+Oregon Region,Hood_River_Crag_Rats,Hood River Crag Rats,45.698866,-121.51455,Hood River County - Oregon
+Inter-Mountain Region,Idaho_Mtn_SAR,Idaho Mountain Search & Rescue,43.57930704,-116.1981727,Ada County - Idaho
+Washington Region,Inland_Northwest_SAR,Inland Northwest Search & Rescue,47.59134401,-117.4148219,Spokane County - Washington
+California Region,Inyo_Co_Sheriffs_Posse_SAR,Inyo County Sheriff's Posse Search & Rescue,37.38066393,-118.4224092,Inyo County - California
+Alaska Region,Juneau_Mtn_Rescue,Juneau Mountain Rescue,58.30175678,-134.4204761,Juneau Borough - Alaska
+Appalachian Region,Knoxville_Vol_Emerg_Rescue,Knoxville Volunteer Emergency Rescue Squad,36.01460979,-83.85531573,Knox County - Tennessee
+Rocky Mountain Region,Larimer_County_SAR,Larimer County Search & Rescue,40.60534792,-105.0964533,Larimer County - Colorado
+Desert Region,Las_Vegas_Metro_PD_SAR,Las Vegas Metro PD Search & Rescue,36.21252011,-115.2077424,Clark County - Nevada
+California Region,Malibu_Mtn_Rescue_Team,Malibu Mountain Rescue Team,34.03506183,-118.7602985,Los Angeles County - California
+California Region,Marin_County_Sherrif_SAR,Marin County Sheriff’s Search and Rescue Unit,38.0189332,-122.5423065,Marin County - California
+California Region,Mono_County_Sheriff_SAR,Mono County Search & Rescue,37.64878312,-118.9779264,Mono County - California
+California Region,Monterey_County,Monterey County Sheriff’s Search and Rescue,36.48102546,-121.7360107,Monterey County - California
+California Region,Montrose_SAR_Team,Montrose Search & Rescue Team,34.20650271,-118.2247766,Los Angeles County - California
+Rocky Mountain Region,Mtn_Rescue_Aspen,"Mountain Rescue Aspen, Inc.",-106.8294753,39.19284742,Pitkin County - Colorado
+Appalachian Region,New_Jersey_SAR,New Jersey Search & Rescue MRT,41.05578105,-74.06800352,Bergen County - New Jersey
+Appalachian Region,Ohio_Special_Response_Team,Ohio Special Response Team,40.75834867,-82.49122489,Richland County - Ohio
+Washington Region,Olympic_Mtn_Rescue,Olympic Mountain Rescue,47.57486804,-122.6952485,Kitsap County - Washington
+California Region,Orange_Co_Sheriff_Dept_SAR,Orange County Sheriff's Dept Search and Rescue,33.822179,-117.775988,Orange County - California
+Rocky Mountain Region,Park_County_SAR,Park County Search & Rescue,39.18109082,-105.9390389,Park County - Colorado
+California Region,Placer_Co_Mtn_Rescue,Placer County Sheriff Mountain Rescue,38.90737053,-121.0824883,Placer County - California
+Oregon Region,Portland_Mtn_Rescue_Unit,Portland Mountain Rescue,45.52737978,-122.6780292,Multnomah County - Oregon
+Inter-Mountain Region,Ravalli_County_SAR,Ravalli County Search & Rescue,46.27324729,-114.1582036,Ravalli County - Montana
+California Region,Riverside_Mtn_Rescue_Unit,Riverside Mountain Rescue Unit,33.74350044,-116.8872292,Riverside County - California
+Canada,Rocky_Mtn_House_SAR,Rocky Mountain House Search & Rescue,52.37517498,-114.9150603,Clearwater County - Alberta
+Rocky Mountain Region,Rocky_Mtn_Rescue_Group,Rocky Mountain Rescue Group,40.01937342,-105.2463923,Boulder County - Colorado
+Inter-Mountain Region,Salt_Lake_County_Sheriffs_SAR,Salt Lake County Sheriff's Search & Rescue,40.69536096,-111.9112366,Salt Lake County - Utah
+California Region,San_Bernardino_Cave_Tech_Resc,San Bernardino Cave & Technical Rescue Team,34.10427992,-117.2725163,San Bernardino County - California
+California Region,San_Bernardino_Mtn_SAR,San Bernardino Mountain Search & Rescue Team,34.15019552,-117.2644612,San Bernardino County - California
+California Region,San_Diego_Mtn_Rescue_Team,San Diego Mountain Rescue Team,32.74651135,-117.2011281,San Diego County - California
+California Region,San_Dimas_Mtn_Rescue_Team,San Dimas Mountain Rescue Team,34.11246006,-117.7983978,Los Angeles County - California
+California Region,Santa_Barbara_County_SAR,Santa Barbara County Search & Rescue,34.43760267,-119.8087282,Santa Barbara County - California
+California Region,Santa_Clara_Sheriff_SAR,Santa Clara Sheriff Search & Rescue,37.35485066,-121.9054896,Santa Clara County - California
+California Region,Santa_Clarita_Valley_SAR,Santa Clarita Valley Search & Rescue,34.41606752,-118.5502935,Los Angeles County - California
+Washington Region,Seattle_Mtn_Rescue_Council,Seattle Mountain Rescue Council,47.59747516,-122.3200332,King County - Washington
+California Region,Sierra_Madre_SAR,Sierra Madre Search & Rescue Team,34.16066291,-118.0528361,Los Angeles County - California
+Alaska Region,Sitka_Mtn_Rescue,Sitka Mountain Rescue,57.05215411,-135.3342764,Sitka Borough - Alaska
+Washington Region,Skagit_Mtn_Rescue_Unit,Skagit Mountain Rescue,48.43560654,-122.3035789,Skagit County - Washington
+Desert Region,Southern_Arizona_Rescue_Assoc,Southern Arizona Rescue Association,32.22465012,-110.8838898,Pima County - Arizona
+Appalachian Region,Stowe_Mtn_Rescue,Stowe Mountain Rescue,44.47444591,-72.70055937,Lamoille County - Vermont
+Rocky Mountain Region,Summit_County_Rescue_Group,Summit County Rescue Group,39.49028141,-106.0474164,Summit County - Colorado
+Washington Region,Tacoma_Mtn_Rescue_Unit,Tacoma Mountain Rescue Unit,47.19028888,-122.3626052,Pierce County - Washington
+California Region,Tehachapi_Mtns_SAR,Tehachapi Mountains Search & Rescue,35.34243025,-119.0777033,Kern County - California
+Rocky Mountain Region,Teton_County_SAR,Teton County Search and Rescue,43.47698757,-110.7909783,Teton County - Wyoming
+Desert Region,Tonto_Rim_SAR,Tonto Rim Search and Rescue,34.38686389,-111.4547584,Gila County - Arizona
+Inter-Mountain Region,Utah_County_Sheriff_SAR,Utah County Sheriff's Search & Rescue,40.15807799,-111.656996,Utah County - Utah
+Rocky Mountain Region,Vail_Mtn_Rescue_Group,Vail Mountain Rescue Group,39.63880239,-106.4039284,Eagle County - Colorado
+California Region,Ventura_County_Sheriff_SAR,Ventura County Sheriff Search & Rescue,34.24637481,-118.8338301,Ventura County - California
+Appalachian Region,Vermont_Dept_Public_Safety,Vermont Department of Public Safety,44.15976555,-72.88466105,Washington County - Vermont
+Washington Region,Volcano_Rescue_Team,Volcano Rescue Team,45.86210595,-122.4094029,Clark County - Washington
+Inter-Mountain Region,Weber_County_Sheriff_Mtn_Rescue,Weber County Sheriff Mountain Rescue,41.244321,-111.9952349,Weber County - Utah
+California Region,West_Valley_SAR,West Valley Search & Rescue,34.13265447,-117.6144448,San Bernardino County - California
+Rocky Mountain Region,West_State_Colorado_U_Mtn_Resc,Western State Colorado University Mountain Rescue Team,38.54562073,-106.9176862,Gunnison County - Colorado
+California Region,Wrightwood/Phelan_SAR,Wrightwood/Phelan Search & Rescue,34.42707257,-117.5748072,San Bernardino County - California

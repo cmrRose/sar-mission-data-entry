@@ -1,0 +1,56 @@
+{
+    "access": "public",
+    "accessInformation": null,
+    "appCategories": [
+    ],
+    "avgRating": 0,
+    "banner": null,
+    "categories": [
+    ],
+    "commentsEnabled": true,
+    "created": 1517420921000,
+    "culture": "en-us",
+    "description": "\n<p style='-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;'><br /></p>",
+    "documentation": null,
+    "extent": [
+    ],
+    "guid": null,
+    "id": "b501542feee74f8a92398e88d84ed111",
+    "industries": [
+    ],
+    "itemControl": "admin",
+    "languages": [
+    ],
+    "largeThumbnail": null,
+    "licenseInfo": null,
+    "listed": false,
+    "modified": 1517610067000,
+    "name": "Mission_Data_2018.zip",
+    "numComments": 0,
+    "numRatings": 0,
+    "numViews": 1,
+    "orgId": "4VBZFeVR0gsH4uni",
+    "owner": "MRA_Admin",
+    "ownerFolder": "eadb631aaa66432ab175b43bc9f4e526",
+    "properties": null,
+    "protected": false,
+    "proxyFilter": null,
+    "scoreCompleteness": 45,
+    "screenshots": [
+    ],
+    "size": 169678,
+    "snippet": "MRA mission data ",
+    "spatialReference": null,
+    "tags": [
+    ],
+    "thumbnail": "thumbnail/Mission_Data_2018.png",
+    "title": "MRA Mission Data 2018",
+    "type": "Form",
+    "typeKeywords": [
+        "Form",
+        "Survey123",
+        "Survey123 Connect",
+        "xForm"
+    ],
+    "url": null
+}

@@ -1,0 +1,32 @@
+{
+    "layers": [
+        {
+            "id": 0,
+            "relationships": [
+                {
+                    "cardinality": "esriRelCardinalityOneToMany",
+                    "composite": true,
+                    "id": 1,
+                    "keyField": "globalid",
+                    "name": "Relationship_Point_Found",
+                    "relatedTableId": 1,
+                    "role": "esriRelRoleOrigin"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "relationships": [
+                {
+                    "cardinality": "esriRelCardinalityOneToMany",
+                    "composite": true,
+                    "id": 1,
+                    "keyField": "parentglobalid",
+                    "name": "Relationship_Point_Found",
+                    "relatedTableId": 0,
+                    "role": "esriRelRoleDestination"
+                }
+            ]
+        }
+    ]
+}

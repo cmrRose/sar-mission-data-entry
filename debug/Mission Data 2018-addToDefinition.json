@@ -1,0 +1,2256 @@
+{
+    "layers": [
+        {
+            "adminLayerInfo": {
+                "geometryField": {
+                    "name": "geometry",
+                    "srid": 4326
+                }
+            },
+            "allowGeometryUpdates": true,
+            "capabilities": "Query,Editing,Create,Update,Delete",
+            "copyrightText": "",
+            "defaultVisibility": true,
+            "description": "",
+            "displayField": "",
+            "drawingInfo": {
+                "labelingInfo": null,
+                "renderer": {
+                    "description": "Survey Data Locations",
+                    "label": "MRA Mission Data 2018",
+                    "symbol": {
+                        "angle": 0,
+                        "color": [
+                            255,
+                            0,
+                            0,
+                            255
+                        ],
+                        "outline": {
+                            "color": [
+                                255,
+                                255,
+                                0,
+                                255
+                            ],
+                            "width": 1
+                        },
+                        "size": 8,
+                        "style": "esriSMSCircle",
+                        "type": "esriSMS",
+                        "xoffset": 0,
+                        "yoffset": 0
+                    },
+                    "type": "simple"
+                },
+                "transparency": 0
+            },
+            "extent": {
+                "spatialReference": {
+                    "wkid": 4326
+                },
+                "type": "extent",
+                "xmax": 180,
+                "xmin": -180,
+                "ymax": 90,
+                "ymin": -90
+            },
+            "fields": [
+                {
+                    "alias": "ObjectID",
+                    "defaultValue": null,
+                    "domain": null,
+                    "editable": false,
+                    "name": "objectid",
+                    "nullable": false,
+                    "type": "esriFieldTypeOID"
+                },
+                {
+                    "alias": "GlobalID",
+                    "defaultValue": null,
+                    "domain": null,
+                    "editable": false,
+                    "length": 38,
+                    "name": "globalid",
+                    "nullable": false,
+                    "sqlType": "sqlTypeGUID",
+                    "type": "esriFieldTypeGlobalID"
+                },
+                {
+                    "alias": "Team Name",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "Alaska_Mtn_Rescue_Group",
+                                "name": "Alaska Mountain Rescue Group"
+                            },
+                            {
+                                "code": "Albuquerque_Mtn_Rescue_Council",
+                                "name": "Albuquerque Mountain Rescue Council"
+                            },
+                            {
+                                "code": "Allegheny_Mtn_Rescue_Group",
+                                "name": "Allegheny Mountain Rescue Group"
+                            },
+                            {
+                                "code": "Alpine_Rescue_Team",
+                                "name": "Alpine Rescue Team"
+                            },
+                            {
+                                "code": "Altadena_Mountain_Rescue_Team",
+                                "name": "Altadena Mountain Rescue Team"
+                            },
+                            {
+                                "code": "Appalachian_Mtn_Rescue_Team",
+                                "name": "Appalachian Mountain Rescue Team"
+                            },
+                            {
+                                "code": "Atalaya_SAR",
+                                "name": "Atalaya Search and Rescue Team"
+                            },
+                            {
+                                "code": "Bay_Area_Mtn_Rescue_Team",
+                                "name": "Bay Area Mountain Rescue Team"
+                            },
+                            {
+                                "code": "Bellingham_Mtn_Rescue_Council",
+                                "name": "Bellingham Mountain Rescue Council"
+                            },
+                            {
+                                "code": "Blue_Knob_Ski_Patrol",
+                                "name": "Blue Knob Ski Patrol"
+                            },
+                            {
+                                "code": "Cache_County_Sheriffs_SAR",
+                                "name": "Cache County Sheriff's Search & Rescue"
+                            },
+                            {
+                                "code": "Central_Arizona_MRA",
+                                "name": "Central Arizona Mountain Rescue Association"
+                            },
+                            {
+                                "code": "Central_Washington_Mtn_Rescue",
+                                "name": "Central Washington Mountain Rescue"
+                            },
+                            {
+                                "code": "Chaffee_County_SAR_North",
+                                "name": "Chaffee County SAR North"
+                            },
+                            {
+                                "code": "Chattanooga-Hamilton_Co_Resc",
+                                "name": "Chattanooga-Hamilton County Rescue Service"
+                            },
+                            {
+                                "code": "China_Lake_Mtn_Rescue_Group",
+                                "name": "China Lake Mountain Rescue Group"
+                            },
+                            {
+                                "code": "Coconino_Co_Sheriffs_SAR_Unit",
+                                "name": "Coconino County Sheriff's Search & Rescue"
+                            },
+                            {
+                                "code": "Contra_Costa_Co_Sheriffs_SAR",
+                                "name": "Contra Costa County Sheriff's Search and Rescue"
+                            },
+                            {
+                                "code": "Corvallis_Mtn_Rescue_Unit",
+                                "name": "Corvallis Mountain Rescue Unit"
+                            },
+                            {
+                                "code": "Crested_Butte_SAR",
+                                "name": "Crested Butte Search and Rescue"
+                            },
+                            {
+                                "code": "Davis_County_Sheriffs_SAR",
+                                "name": "Davis County Sheriff's Search & Rescue"
+                            },
+                            {
+                                "code": "Deschutes_County_SAR",
+                                "name": "Deschutes County Search & Rescue"
+                            },
+                            {
+                                "code": "Douglas_County_SAR_CO",
+                                "name": "Douglas County Search & Rescue Colorado"
+                            },
+                            {
+                                "code": "Douglas_County_SAR_Nevada",
+                                "name": "Douglas County Search & Rescue Nevada"
+                            },
+                            {
+                                "code": "El_Paso_County_SAR",
+                                "name": "El Paso County Search & Rescue"
+                            },
+                            {
+                                "code": "Eugene_Mtn_Rescue",
+                                "name": "Eugene Mountain Rescue"
+                            },
+                            {
+                                "code": "Everett_Mtn_Rescue_Unit",
+                                "name": "Everett Mountain Rescue Unit"
+                            },
+                            {
+                                "code": "Fillmore_SAR",
+                                "name": "Fillmore Search and Rescue"
+                            },
+                            {
+                                "code": "Fremont_SAR",
+                                "name": "Fremont Search and Rescue"
+                            },
+                            {
+                                "code": "Fresno_Co_Sheriffs_SAR_Mtneering",
+                                "name": "Fresno County Sheriff's Search & Rescue Mountaineering Team"
+                            },
+                            {
+                                "code": "Garfield_County_SAR",
+                                "name": "Garfield County Search and Rescue"
+                            },
+                            {
+                                "code": "Grand_County_SAR",
+                                "name": "Grand County Search and Rescue"
+                            },
+                            {
+                                "code": "Hood_River_Crag_Rats",
+                                "name": "Hood River Crag Rats"
+                            },
+                            {
+                                "code": "Idaho_Mtn_SAR",
+                                "name": "Idaho Mountain Search & Rescue"
+                            },
+                            {
+                                "code": "Inland_Northwest_SAR",
+                                "name": "Inland Northwest Search & Rescue"
+                            },
+                            {
+                                "code": "Inyo_Co_Sheriffs_Posse_SAR",
+                                "name": "Inyo County Sheriff's Posse Search & Rescue"
+                            },
+                            {
+                                "code": "Juneau_Mtn_Rescue",
+                                "name": "Juneau Mountain Rescue"
+                            },
+                            {
+                                "code": "Knoxville_Vol_Emerg_Rescue",
+                                "name": "Knoxville Volunteer Emergency Rescue Squad"
+                            },
+                            {
+                                "code": "Larimer_County_SAR",
+                                "name": "Larimer County Search & Rescue"
+                            },
+                            {
+                                "code": "Las_Vegas_Metro_PD_SAR",
+                                "name": "Las Vegas Metro PD Search & Rescue"
+                            },
+                            {
+                                "code": "Malibu_Mtn_Rescue_Team",
+                                "name": "Malibu Mountain Rescue Team"
+                            },
+                            {
+                                "code": "Marin_County_Sherrif_SAR",
+                                "name": "Marin County Sheriff’s Search and Rescue Unit"
+                            },
+                            {
+                                "code": "Mono_County_Sheriff_SAR",
+                                "name": "Mono County Search & Rescue"
+                            },
+                            {
+                                "code": "Monterey_County",
+                                "name": "Monterey County Sheriff’s Search and Rescue"
+                            },
+                            {
+                                "code": "Montrose_SAR_Team",
+                                "name": "Montrose Search & Rescue Team"
+                            },
+                            {
+                                "code": "Mtn_Rescue_Aspen",
+                                "name": "Mountain Rescue Aspen, Inc."
+                            },
+                            {
+                                "code": "New_Jersey_SAR",
+                                "name": "New Jersey Search & Rescue MRT"
+                            },
+                            {
+                                "code": "Ohio_Special_Response_Team",
+                                "name": "Ohio Special Response Team"
+                            },
+                            {
+                                "code": "Olympic_Mtn_Rescue",
+                                "name": "Olympic Mountain Rescue"
+                            },
+                            {
+                                "code": "Orange_Co_Sheriff_Dept_SAR",
+                                "name": "Orange County Sheriff's Dept Search and Rescue"
+                            },
+                            {
+                                "code": "Park_County_SAR",
+                                "name": "Park County Search & Rescue"
+                            },
+                            {
+                                "code": "Placer_Co_Mtn_Rescue",
+                                "name": "Placer County Sheriff Mountain Rescue"
+                            },
+                            {
+                                "code": "Portland_Mtn_Rescue_Unit",
+                                "name": "Portland Mountain Rescue"
+                            },
+                            {
+                                "code": "Ravalli_County_SAR",
+                                "name": "Ravalli County Search & Rescue"
+                            },
+                            {
+                                "code": "Riverside_Mtn_Rescue_Unit",
+                                "name": "Riverside Mountain Rescue Unit"
+                            },
+                            {
+                                "code": "Rocky_Mtn_House_SAR",
+                                "name": "Rocky Mountain House Search & Rescue"
+                            },
+                            {
+                                "code": "Rocky_Mtn_Rescue_Group",
+                                "name": "Rocky Mountain Rescue Group"
+                            },
+                            {
+                                "code": "Salt_Lake_County_Sheriffs_SAR",
+                                "name": "Salt Lake County Sheriff's Search & Rescue"
+                            },
+                            {
+                                "code": "San_Bernardino_Cave_Tech_Resc",
+                                "name": "San Bernardino Cave & Technical Rescue Team"
+                            },
+                            {
+                                "code": "San_Bernardino_Mtn_SAR",
+                                "name": "San Bernardino Mountain Search & Rescue Team"
+                            },
+                            {
+                                "code": "San_Diego_Mtn_Rescue_Team",
+                                "name": "San Diego Mountain Rescue Team"
+                            },
+                            {
+                                "code": "San_Dimas_Mtn_Rescue_Team",
+                                "name": "San Dimas Mountain Rescue Team"
+                            },
+                            {
+                                "code": "Santa_Barbara_County_SAR",
+                                "name": "Santa Barbara County Search & Rescue"
+                            },
+                            {
+                                "code": "Santa_Clara_Sheriff_SAR",
+                                "name": "Santa Clara Sheriff Search & Rescue"
+                            },
+                            {
+                                "code": "Santa_Clarita_Valley_SAR",
+                                "name": "Santa Clarita Valley Search & Rescue"
+                            },
+                            {
+                                "code": "Seattle_Mtn_Rescue_Council",
+                                "name": "Seattle Mountain Rescue Council"
+                            },
+                            {
+                                "code": "Sierra_Madre_SAR",
+                                "name": "Sierra Madre Search & Rescue Team"
+                            },
+                            {
+                                "code": "Sitka_Mtn_Rescue",
+                                "name": "Sitka Mountain Rescue"
+                            },
+                            {
+                                "code": "Skagit_Mtn_Rescue_Unit",
+                                "name": "Skagit Mountain Rescue"
+                            },
+                            {
+                                "code": "Southern_Arizona_Rescue_Assoc",
+                                "name": "Southern Arizona Rescue Association"
+                            },
+                            {
+                                "code": "Stowe_Mtn_Rescue",
+                                "name": "Stowe Mountain Rescue"
+                            },
+                            {
+                                "code": "Summit_County_Rescue_Group",
+                                "name": "Summit County Rescue Group"
+                            },
+                            {
+                                "code": "Tacoma_Mtn_Rescue_Unit",
+                                "name": "Tacoma Mountain Rescue Unit"
+                            },
+                            {
+                                "code": "Tehachapi_Mtns_SAR",
+                                "name": "Tehachapi Mountains Search & Rescue"
+                            },
+                            {
+                                "code": "Teton_County_SAR",
+                                "name": "Teton County Search and Rescue"
+                            },
+                            {
+                                "code": "Tonto_Rim_SAR",
+                                "name": "Tonto Rim Search and Rescue"
+                            },
+                            {
+                                "code": "Utah_County_Sheriff_SAR",
+                                "name": "Utah County Sheriff's Search & Rescue"
+                            },
+                            {
+                                "code": "Vail_Mtn_Rescue_Group",
+                                "name": "Vail Mountain Rescue Group"
+                            },
+                            {
+                                "code": "Ventura_County_Sheriff_SAR",
+                                "name": "Ventura County Sheriff Search & Rescue"
+                            },
+                            {
+                                "code": "Vermont_Dept_Public_Safety",
+                                "name": "Vermont Department of Public Safety"
+                            },
+                            {
+                                "code": "Volcano_Rescue_Team",
+                                "name": "Volcano Rescue Team"
+                            },
+                            {
+                                "code": "Weber_County_Sheriff_Mtn_Rescue",
+                                "name": "Weber County Sheriff Mountain Rescue"
+                            },
+                            {
+                                "code": "West_Valley_SAR",
+                                "name": "West Valley Search & Rescue"
+                            },
+                            {
+                                "code": "West_State_Colorado_U_Mtn_Resc",
+                                "name": "Western State Colorado University Mountain Rescue Team"
+                            },
+                            {
+                                "code": "Wrightwood/Phelan_SAR",
+                                "name": "Wrightwood/Phelan Search & Rescue"
+                            },
+                            {
+                                "code": "Team_Not_Listed",
+                                "name": "Team Not Listed"
+                            }
+                        ],
+                        "name": "cvd_Team",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 500,
+                    "name": "Team",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Team Name If Not Listed",
+                    "domain": null,
+                    "editable": true,
+                    "length": 500,
+                    "name": "Team_Not_Listed",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Region",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Region",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Home_County",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Home_County",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Incident Number",
+                    "domain": null,
+                    "editable": true,
+                    "length": 50,
+                    "name": "Incident_Number",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Was this a Mutual Aid incident?",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "YES",
+                                "name": "Yes"
+                            },
+                            {
+                                "code": "NO",
+                                "name": "No"
+                            }
+                        ],
+                        "name": "cvd_Mutual_Aid",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 3,
+                    "name": "Mutual_Aid",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Mutual Aid or State Number",
+                    "domain": null,
+                    "editable": true,
+                    "length": 250,
+                    "name": "Mutual_Aid_Number",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Lead Agency",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "YES",
+                                "name": "Yes"
+                            },
+                            {
+                                "code": "NO",
+                                "name": "No"
+                            }
+                        ],
+                        "name": "cvd_Lead_Agency",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 3,
+                    "name": "Lead_Agency",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Type of Incident",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "AIRCRAFT_DOWN/ELT_ACTIVATION",
+                                "name": "Aircraft Down/ELT Activation"
+                            },
+                            {
+                                "code": "AVALANCHE",
+                                "name": "Avalanche"
+                            },
+                            {
+                                "code": "CAVE_SEARCH/RESCUE",
+                                "name": "Cave Search/Rescue"
+                            },
+                            {
+                                "code": "DISASTER-OTHER",
+                                "name": "Disaster - Other"
+                            },
+                            {
+                                "code": "DIVE_RESCUE/RECOVERY",
+                                "name": "Dive Rescue/Recovery"
+                            },
+                            {
+                                "code": "EARTHQUAKE",
+                                "name": "Earthquake"
+                            },
+                            {
+                                "code": "EVIDENCE_SEARCH",
+                                "name": "Evidence Search"
+                            },
+                            {
+                                "code": "FIRE",
+                                "name": "Fire"
+                            },
+                            {
+                                "code": "FLOOD",
+                                "name": "Flood"
+                            },
+                            {
+                                "code": "LAW_ENFORCEMENT_ACTIVITY",
+                                "name": "Law Enforcement Activity"
+                            },
+                            {
+                                "code": "MEDICAL_AID",
+                                "name": "Medical Aid"
+                            },
+                            {
+                                "code": "MINE_SEARCH/RESCUE",
+                                "name": "Mine Search/Rescue"
+                            },
+                            {
+                                "code": "PLB_ACTIVATION",
+                                "name": "PLB Activation"
+                            },
+                            {
+                                "code": "PUBLIC_RELATIONS/PSAR_EVENT",
+                                "name": "Public Relations/PSAR Event"
+                            },
+                            {
+                                "code": "RECOVERY",
+                                "name": "Recovery"
+                            },
+                            {
+                                "code": "RESCUE",
+                                "name": "Rescue"
+                            },
+                            {
+                                "code": "SEARCH",
+                                "name": "Search"
+                            },
+                            {
+                                "code": "SEND_ACTIVATION",
+                                "name": "SEND Activation"
+                            },
+                            {
+                                "code": "SWIFTWATER_RESCUE",
+                                "name": "Swiftwater Rescue"
+                            },
+                            {
+                                "code": "TRAINING",
+                                "name": "Training"
+                            }
+                        ],
+                        "name": "cvd_Type",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Type",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Type of Training",
+                    "domain": null,
+                    "editable": true,
+                    "length": 500,
+                    "name": "Training_Type",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Was The Transmitter Accidentally Activated?",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "YES",
+                                "name": "Yes"
+                            },
+                            {
+                                "code": "NO",
+                                "name": "No"
+                            }
+                        ],
+                        "name": "cvd_Accidental_Transmitter",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 3,
+                    "name": "Accidental_Transmitter",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Incident Start Date and Time",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Date",
+                    "nullable": true,
+                    "type": "esriFieldTypeDate"
+                },
+                {
+                    "alias": "Number of Operational Periods",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Operational_Periods",
+                    "nullable": true,
+                    "type": "esriFieldTypeInteger"
+                },
+                {
+                    "alias": "Primary Response Area",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "YES",
+                                "name": "Yes"
+                            },
+                            {
+                                "code": "NO",
+                                "name": "No"
+                            }
+                        ],
+                        "name": "cvd_Primary_Area",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Primary_Area",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Number of Volunteers Supporting the Incident",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Number_Volunteers",
+                    "nullable": true,
+                    "type": "esriFieldTypeInteger"
+                },
+                {
+                    "alias": "Total Volunteer Hours on the Incident",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Total_Hours",
+                    "nullable": true,
+                    "type": "esriFieldTypeInteger"
+                },
+                {
+                    "alias": "Total Volunteer Mileage",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Mileage",
+                    "nullable": true,
+                    "type": "esriFieldTypeInteger"
+                },
+                {
+                    "alias": "Total Paid Staff Hours on the Incident",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Total_Paid_Hours",
+                    "nullable": true,
+                    "type": "esriFieldTypeInteger"
+                },
+                {
+                    "alias": "Aircraft Used",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Aircraft_Used",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Aircraft Hours",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Aircraft_Hours",
+                    "nullable": true,
+                    "type": "esriFieldTypeInteger"
+                },
+                {
+                    "alias": "Hoist Used",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "YES",
+                                "name": "Yes"
+                            },
+                            {
+                                "code": "NO",
+                                "name": "No"
+                            }
+                        ],
+                        "name": "cvd_Hoist_Used",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Hoist_Used",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Area Type",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "WILDERNESS",
+                                "name": "Wilderness"
+                            },
+                            {
+                                "code": "RURAL",
+                                "name": "Rural"
+                            },
+                            {
+                                "code": "SUBURBAN",
+                                "name": "Suburban"
+                            },
+                            {
+                                "code": "URBAN",
+                                "name": "Urban"
+                            },
+                            {
+                                "code": "WATER",
+                                "name": "Water"
+                            },
+                            {
+                                "code": "OTHER",
+                                "name": "Other"
+                            }
+                        ],
+                        "name": "cvd_Area_Type",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Area_Type",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Specify Other Area Type",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Area_Type_Other",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Land Ownership",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "BLM",
+                                "name": "BLM"
+                            },
+                            {
+                                "code": "CITY",
+                                "name": "City"
+                            },
+                            {
+                                "code": "COUNTY",
+                                "name": "County"
+                            },
+                            {
+                                "code": "MILITARY",
+                                "name": "Military"
+                            },
+                            {
+                                "code": "NATIONAL_FOREST",
+                                "name": "National Forest"
+                            },
+                            {
+                                "code": "NATIONAL_PARK/MONUMENT",
+                                "name": "National Park/Monument"
+                            },
+                            {
+                                "code": "PRIVATE",
+                                "name": "Private"
+                            },
+                            {
+                                "code": "STATE",
+                                "name": "State"
+                            },
+                            {
+                                "code": "TRIBAL",
+                                "name": "Tribal"
+                            },
+                            {
+                                "code": "OTHER",
+                                "name": "Other"
+                            }
+                        ],
+                        "name": "cvd_Land_Ownership",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Land_Ownership",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Specify Other Land Ownership",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Land_Ownership_Other",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Total Number of Subjects",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Number_Subjects",
+                    "nullable": true,
+                    "type": "esriFieldTypeInteger"
+                },
+                {
+                    "alias": "Subject Category",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "ALZHEIMERS/DEMENTIA",
+                                "name": "Alzheimers/Dementia"
+                            },
+                            {
+                                "code": "BASE_JUMPING",
+                                "name": "Base Jumping"
+                            },
+                            {
+                                "code": "BIKING",
+                                "name": "Biking"
+                            },
+                            {
+                                "code": "BOATING",
+                                "name": "Boating"
+                            },
+                            {
+                                "code": "BYSTANDER",
+                                "name": "Bystander"
+                            },
+                            {
+                                "code": "CAMPING",
+                                "name": "Camping"
+                            },
+                            {
+                                "code": "CANOEING/KAYAKING/RAFTING",
+                                "name": "Canoeing/Kayaking/Rafting"
+                            },
+                            {
+                                "code": "CAVING",
+                                "name": "Caving"
+                            },
+                            {
+                                "code": "CHILD_AGE_0-15",
+                                "name": "Child Age 0-15 (If No Other Category Applies)"
+                            },
+                            {
+                                "code": "CLIMBING",
+                                "name": "Climbing"
+                            },
+                            {
+                                "code": "DESPONDENT/SUICIDE",
+                                "name": "Despondent/Suicide"
+                            },
+                            {
+                                "code": "DIMINISHED_CAPACITY:_OTHER",
+                                "name": "Diminished Capacity: Other"
+                            },
+                            {
+                                "code": "DRIVING",
+                                "name": "Driving"
+                            },
+                            {
+                                "code": "FISHING",
+                                "name": "Fishing"
+                            },
+                            {
+                                "code": "FLYING",
+                                "name": "Flying"
+                            },
+                            {
+                                "code": "FOUR_WHEEL_DRIVING",
+                                "name": "Four Wheel Driving"
+                            },
+                            {
+                                "code": "GATHERING",
+                                "name": "Gathering"
+                            },
+                            {
+                                "code": "HIKING",
+                                "name": "Hiking"
+                            },
+                            {
+                                "code": "HORSEBACK_RIDING",
+                                "name": "Horseback Riding"
+                            },
+                            {
+                                "code": "HUNTING",
+                                "name": "Hunting"
+                            },
+                            {
+                                "code": "JOGGER/RUNNER",
+                                "name": "Jogger/Runner"
+                            },
+                            {
+                                "code": "MINE_EXPLORATION",
+                                "name": "Mine Exploration"
+                            },
+                            {
+                                "code": "MOTORCYCLING_(STREET)",
+                                "name": "Motorcycling (Street)"
+                            },
+                            {
+                                "code": "MOUNTAINEERING",
+                                "name": "Mountaineering"
+                            },
+                            {
+                                "code": "OHV/ATV",
+                                "name": "OHV/ATV"
+                            },
+                            {
+                                "code": "PHOTOGRAPHY",
+                                "name": "Photography"
+                            },
+                            {
+                                "code": "RUNAWAY",
+                                "name": "Runaway"
+                            },
+                            {
+                                "code": "SCHOOL/EDUCATION_PROGRAM",
+                                "name": "School/Education Program"
+                            },
+                            {
+                                "code": "SNOW_SHOEING",
+                                "name": "Snow Shoeing"
+                            },
+                            {
+                                "code": "SNOW_SKIING",
+                                "name": "Snow Skiing"
+                            },
+                            {
+                                "code": "SNOWBOARDING",
+                                "name": "Snowboarding"
+                            },
+                            {
+                                "code": "SNOWMOBILING",
+                                "name": "Snowmobiling"
+                            },
+                            {
+                                "code": "SWIMMING",
+                                "name": "Swimming"
+                            },
+                            {
+                                "code": "WORKING",
+                                "name": "Working"
+                            },
+                            {
+                                "code": "OTHER",
+                                "name": "Other"
+                            }
+                        ],
+                        "name": "cvd_Category",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Category",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Please Specify Other Category",
+                    "domain": null,
+                    "editable": true,
+                    "length": 500,
+                    "name": "Category_Other",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 1: Age",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Age_Sub_1",
+                    "nullable": true,
+                    "type": "esriFieldTypeInteger"
+                },
+                {
+                    "alias": "Subject 1: Gender",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "MALE",
+                                "name": "Male"
+                            },
+                            {
+                                "code": "FEMALE",
+                                "name": "Female"
+                            }
+                        ],
+                        "name": "cvd_Gender_Sub_1",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Gender_Sub_1",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 1: Level of Fitness",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "EXCELLENT",
+                                "name": "Excellent"
+                            },
+                            {
+                                "code": "GOOD",
+                                "name": "Good"
+                            },
+                            {
+                                "code": "FAIR",
+                                "name": "Fair"
+                            },
+                            {
+                                "code": "POOR",
+                                "name": "Poor"
+                            },
+                            {
+                                "code": "UNKNOWN",
+                                "name": "Unknown"
+                            }
+                        ],
+                        "name": "cvd_Fitness_Sub_1",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Fitness_Sub_1",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 1: Level of Experience",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "EXCELLENT",
+                                "name": "Excellent"
+                            },
+                            {
+                                "code": "GOOD",
+                                "name": "Good"
+                            },
+                            {
+                                "code": "FAIR",
+                                "name": "Fair"
+                            },
+                            {
+                                "code": "POOR",
+                                "name": "Poor"
+                            },
+                            {
+                                "code": "UNKNOWN",
+                                "name": "Unknown"
+                            }
+                        ],
+                        "name": "cvd_Experience_Sub_1",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Experience_Sub_1",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 1: Mental Factors",
+                    "domain": null,
+                    "editable": true,
+                    "length": 50,
+                    "name": "Mental_Factor_Sub_1",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 1: Mental Rating",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "NORMAL",
+                                "name": "Normal"
+                            },
+                            {
+                                "code": "MILD",
+                                "name": "Mild"
+                            },
+                            {
+                                "code": "MODERATE",
+                                "name": "Moderate"
+                            },
+                            {
+                                "code": "SEVERE",
+                                "name": "Severe"
+                            }
+                        ],
+                        "name": "cvd_Mental_Rating_Sub_1",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 8,
+                    "name": "Mental_Rating_Sub_1",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 2: Age",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Age_Sub_2",
+                    "nullable": true,
+                    "type": "esriFieldTypeInteger"
+                },
+                {
+                    "alias": "Subject 2: Gender",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "MALE",
+                                "name": "Male"
+                            },
+                            {
+                                "code": "FEMALE",
+                                "name": "Female"
+                            }
+                        ],
+                        "name": "cvd_Gender_Sub_2",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Gender_Sub_2",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 2: Level of Fitness",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "EXCELLENT",
+                                "name": "Excellent"
+                            },
+                            {
+                                "code": "GOOD",
+                                "name": "Good"
+                            },
+                            {
+                                "code": "FAIR",
+                                "name": "Fair"
+                            },
+                            {
+                                "code": "POOR",
+                                "name": "Poor"
+                            },
+                            {
+                                "code": "UNKNOWN",
+                                "name": "Unknown"
+                            }
+                        ],
+                        "name": "cvd_Fitness_Sub_2",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Fitness_Sub_2",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 2: Level of Experience",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "EXCELLENT",
+                                "name": "Excellent"
+                            },
+                            {
+                                "code": "GOOD",
+                                "name": "Good"
+                            },
+                            {
+                                "code": "FAIR",
+                                "name": "Fair"
+                            },
+                            {
+                                "code": "POOR",
+                                "name": "Poor"
+                            },
+                            {
+                                "code": "UNKNOWN",
+                                "name": "Unknown"
+                            }
+                        ],
+                        "name": "cvd_Experience_Sub_2",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Experience_Sub_2",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 2: Mental Factors",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "NONE",
+                                "name": "None"
+                            },
+                            {
+                                "code": "SUBSTANCE_INTOXICATION",
+                                "name": "Substance Intoxication"
+                            },
+                            {
+                                "code": "AUTISM",
+                                "name": "Autism"
+                            },
+                            {
+                                "code": "ALZHEIMERS/DEMENTIA",
+                                "name": "Alzheimers/Dementia"
+                            },
+                            {
+                                "code": "INTELLECTUAL_DISABILITY",
+                                "name": "Intellectual Disability"
+                            },
+                            {
+                                "code": "MENTAL_ILLNESS",
+                                "name": "Mental Illness"
+                            }
+                        ],
+                        "name": "cvd_Mental_Factor_Sub_2",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Mental_Factor_Sub_2",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 2: Mental Rating",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "NORMAL",
+                                "name": "Normal"
+                            },
+                            {
+                                "code": "MILD",
+                                "name": "Mild"
+                            },
+                            {
+                                "code": "MODERATE",
+                                "name": "Moderate"
+                            },
+                            {
+                                "code": "SEVERE",
+                                "name": "Severe"
+                            }
+                        ],
+                        "name": "cvd_Mental_Rating_Sub_2",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 8,
+                    "name": "Mental_Rating_Sub_2",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 3: Age",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Age_Sub_3",
+                    "nullable": true,
+                    "type": "esriFieldTypeInteger"
+                },
+                {
+                    "alias": "Subject 3: Gender",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "MALE",
+                                "name": "Male"
+                            },
+                            {
+                                "code": "FEMALE",
+                                "name": "Female"
+                            }
+                        ],
+                        "name": "cvd_Gender_Sub_3",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Gender_Sub_3",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 3: Level of Fitness",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "EXCELLENT",
+                                "name": "Excellent"
+                            },
+                            {
+                                "code": "GOOD",
+                                "name": "Good"
+                            },
+                            {
+                                "code": "FAIR",
+                                "name": "Fair"
+                            },
+                            {
+                                "code": "POOR",
+                                "name": "Poor"
+                            },
+                            {
+                                "code": "UNKNOWN",
+                                "name": "Unknown"
+                            }
+                        ],
+                        "name": "cvd_Fitness_Sub_3",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Fitness_Sub_3",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 3: Level of Experience",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "EXCELLENT",
+                                "name": "Excellent"
+                            },
+                            {
+                                "code": "GOOD",
+                                "name": "Good"
+                            },
+                            {
+                                "code": "FAIR",
+                                "name": "Fair"
+                            },
+                            {
+                                "code": "POOR",
+                                "name": "Poor"
+                            },
+                            {
+                                "code": "UNKNOWN",
+                                "name": "Unknown"
+                            }
+                        ],
+                        "name": "cvd_Experience_Sub_3",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Experience_Sub_3",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 3: Mental Factors",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "NONE",
+                                "name": "None"
+                            },
+                            {
+                                "code": "SUBSTANCE_INTOXICATION",
+                                "name": "Substance Intoxication"
+                            },
+                            {
+                                "code": "AUTISM",
+                                "name": "Autism"
+                            },
+                            {
+                                "code": "ALZHEIMERS/DEMENTIA",
+                                "name": "Alzheimers/Dementia"
+                            },
+                            {
+                                "code": "INTELLECTUAL_DISABILITY",
+                                "name": "Intellectual Disability"
+                            },
+                            {
+                                "code": "MENTAL_ILLNESS",
+                                "name": "Mental Illness"
+                            }
+                        ],
+                        "name": "cvd_Mental_Factor_Sub_3",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Mental_Factor_Sub_3",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 3: Mental Rating",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "NORMAL",
+                                "name": "Normal"
+                            },
+                            {
+                                "code": "MILD",
+                                "name": "Mild"
+                            },
+                            {
+                                "code": "MODERATE",
+                                "name": "Moderate"
+                            },
+                            {
+                                "code": "SEVERE",
+                                "name": "Severe"
+                            }
+                        ],
+                        "name": "cvd_Mental_Rating_Sub_3",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 8,
+                    "name": "Mental_Rating_Sub_3",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 4: Age",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Age_Sub_4",
+                    "nullable": true,
+                    "type": "esriFieldTypeInteger"
+                },
+                {
+                    "alias": "Subject 4: Gender",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "MALE",
+                                "name": "Male"
+                            },
+                            {
+                                "code": "FEMALE",
+                                "name": "Female"
+                            }
+                        ],
+                        "name": "cvd_Gender_Sub_4",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Gender_Sub_4",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 4: Level of Fitness",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "EXCELLENT",
+                                "name": "Excellent"
+                            },
+                            {
+                                "code": "GOOD",
+                                "name": "Good"
+                            },
+                            {
+                                "code": "FAIR",
+                                "name": "Fair"
+                            },
+                            {
+                                "code": "POOR",
+                                "name": "Poor"
+                            },
+                            {
+                                "code": "UNKNOWN",
+                                "name": "Unknown"
+                            }
+                        ],
+                        "name": "cvd_Fitness_Sub_4",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Fitness_Sub_4",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 4: Level of Experience",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "EXCELLENT",
+                                "name": "Excellent"
+                            },
+                            {
+                                "code": "GOOD",
+                                "name": "Good"
+                            },
+                            {
+                                "code": "FAIR",
+                                "name": "Fair"
+                            },
+                            {
+                                "code": "POOR",
+                                "name": "Poor"
+                            },
+                            {
+                                "code": "UNKNOWN",
+                                "name": "Unknown"
+                            }
+                        ],
+                        "name": "cvd_Experience_Sub_4",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Experience_Sub_4",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 4: Mental Factors",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "NONE",
+                                "name": "None"
+                            },
+                            {
+                                "code": "SUBSTANCE_INTOXICATION",
+                                "name": "Substance Intoxication"
+                            },
+                            {
+                                "code": "AUTISM",
+                                "name": "Autism"
+                            },
+                            {
+                                "code": "ALZHEIMERS/DEMENTIA",
+                                "name": "Alzheimers/Dementia"
+                            },
+                            {
+                                "code": "INTELLECTUAL_DISABILITY",
+                                "name": "Intellectual Disability"
+                            },
+                            {
+                                "code": "MENTAL_ILLNESS",
+                                "name": "Mental Illness"
+                            }
+                        ],
+                        "name": "cvd_Mental_Factor_Sub_4",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Mental_Factor_Sub_4",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 4: Mental Rating",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "NORMAL",
+                                "name": "Normal"
+                            },
+                            {
+                                "code": "MILD",
+                                "name": "Mild"
+                            },
+                            {
+                                "code": "MODERATE",
+                                "name": "Moderate"
+                            },
+                            {
+                                "code": "SEVERE",
+                                "name": "Severe"
+                            }
+                        ],
+                        "name": "cvd_Mental_Rating_Sub_4",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Mental_Rating_Sub_4",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 5: Age",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Age_Sub_5",
+                    "nullable": true,
+                    "type": "esriFieldTypeInteger"
+                },
+                {
+                    "alias": "Subject 5: Gender",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "MALE",
+                                "name": "Male"
+                            },
+                            {
+                                "code": "FEMALE",
+                                "name": "Female"
+                            }
+                        ],
+                        "name": "cvd_Gender_Sub_5",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Gender_Sub_5",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 5: Level of Fitness",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "EXCELLENT",
+                                "name": "Excellent"
+                            },
+                            {
+                                "code": "GOOD",
+                                "name": "Good"
+                            },
+                            {
+                                "code": "FAIR",
+                                "name": "Fair"
+                            },
+                            {
+                                "code": "POOR",
+                                "name": "Poor"
+                            },
+                            {
+                                "code": "UNKNOWN",
+                                "name": "Unknown"
+                            }
+                        ],
+                        "name": "cvd_Fitness_Sub_5",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Fitness_Sub_5",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 5: Level of Experience",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "EXCELLENT",
+                                "name": "Excellent"
+                            },
+                            {
+                                "code": "GOOD",
+                                "name": "Good"
+                            },
+                            {
+                                "code": "FAIR",
+                                "name": "Fair"
+                            },
+                            {
+                                "code": "POOR",
+                                "name": "Poor"
+                            },
+                            {
+                                "code": "UNKNOWN",
+                                "name": "Unknown"
+                            }
+                        ],
+                        "name": "cvd_Experience_Sub_5",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Experience_Sub_5",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 5: Mental Factors",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "NONE",
+                                "name": "None"
+                            },
+                            {
+                                "code": "SUBSTANCE_INTOXICATION",
+                                "name": "Substance Intoxication"
+                            },
+                            {
+                                "code": "AUTISM",
+                                "name": "Autism"
+                            },
+                            {
+                                "code": "ALZHEIMERS/DEMENTIA",
+                                "name": "Alzheimers/Dementia"
+                            },
+                            {
+                                "code": "INTELLECTUAL_DISABILITY",
+                                "name": "Intellectual Disability"
+                            },
+                            {
+                                "code": "MENTAL_ILLNESS",
+                                "name": "Mental Illness"
+                            }
+                        ],
+                        "name": "cvd_Mental_Factor_Sub_5",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Mental_Factor_Sub_5",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject 5: Mental Rating",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "NORMAL",
+                                "name": "Normal"
+                            },
+                            {
+                                "code": "MILD",
+                                "name": "Mild"
+                            },
+                            {
+                                "code": "MODERATE",
+                                "name": "Moderate"
+                            },
+                            {
+                                "code": "SEVERE",
+                                "name": "Severe"
+                            }
+                        ],
+                        "name": "cvd_Mental_Rating_Sub_5",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Mental_Rating_Sub_5",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Group Specifics",
+                    "domain": null,
+                    "editable": true,
+                    "length": 2000,
+                    "name": "Group_Specifics",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Number of Subjects Found Alive and Well",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Number_Sub_Well",
+                    "nullable": true,
+                    "type": "esriFieldTypeInteger"
+                },
+                {
+                    "alias": "Number of Subjects Found Ill or Injured",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Number_Sub_Ill_Injured",
+                    "nullable": true,
+                    "type": "esriFieldTypeInteger"
+                },
+                {
+                    "alias": "Number of Subjects Found DOA",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Number_Sub_DOA",
+                    "nullable": true,
+                    "type": "esriFieldTypeInteger"
+                },
+                {
+                    "alias": "Number of Subjects Not Found",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Number_Sub_Not_Found",
+                    "nullable": true,
+                    "type": "esriFieldTypeInteger"
+                },
+                {
+                    "alias": "How Many 'Found' Locations?",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Number_Found_Locations",
+                    "nullable": true,
+                    "type": "esriFieldTypeInteger"
+                },
+                {
+                    "alias": "Point_Found_count",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Point_Found_count",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Level of Care Provided to Subject(s)",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "NONE",
+                                "name": "None"
+                            },
+                            {
+                                "code": "FIRST_AID",
+                                "name": "First Aid"
+                            },
+                            {
+                                "code": "BLS",
+                                "name": "BLS"
+                            },
+                            {
+                                "code": "ALS",
+                                "name": "ALS"
+                            },
+                            {
+                                "code": "FATAL",
+                                "name": "Fatal"
+                            }
+                        ],
+                        "name": "cvd_Level_of_Care_Subject",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Level_of_Care_Subject",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Medical Problems: Subject(s)",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Medical_Problems_Subject",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Specify Other Medical Problems: Subject(s)",
+                    "domain": null,
+                    "editable": true,
+                    "length": 500,
+                    "name": "Medical_Problems_Other_Subject",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Number of Team Members Injured or Ill",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Number_Tm_Injured",
+                    "nullable": true,
+                    "type": "esriFieldTypeInteger"
+                },
+                {
+                    "alias": "Level of Care Provided to Rescuer(s)",
+                    "domain": {
+                        "codedValues": [
+                            {
+                                "code": "NONE",
+                                "name": "None"
+                            },
+                            {
+                                "code": "FIRST_AID",
+                                "name": "First Aid"
+                            },
+                            {
+                                "code": "BLS",
+                                "name": "BLS"
+                            },
+                            {
+                                "code": "ALS",
+                                "name": "ALS"
+                            },
+                            {
+                                "code": "FATAL",
+                                "name": "Fatal"
+                            }
+                        ],
+                        "name": "cvd_Level_of_Care_Rescuer",
+                        "type": "codedValue"
+                    },
+                    "editable": true,
+                    "length": 50,
+                    "name": "Level_of_Care_Rescuer",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Medical Problems: Team Member(s)",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Medical_Problems_Team_Member",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Specify Other Medical Problems: Team Member(s)",
+                    "domain": null,
+                    "editable": true,
+                    "length": 500,
+                    "name": "Medical_Problems_Other_Team_Member",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Medical Provider",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Medical_Provider",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Specify Other Medical Provider",
+                    "domain": null,
+                    "editable": true,
+                    "length": 500,
+                    "name": "Medical_Provider_Other",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Comments",
+                    "domain": null,
+                    "editable": true,
+                    "length": 8000,
+                    "name": "Comments",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                }
+            ],
+            "geometryType": "esriGeometryPoint",
+            "globalIdField": "globalid",
+            "hasAttachments": false,
+            "hasM": false,
+            "hasStaticData": false,
+            "hasZ": false,
+            "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+            "id": 0,
+            "indexes": [
+                {
+                    "description": "GlobalID index",
+                    "fields": "globalid",
+                    "isAscending": false,
+                    "isUnique": true,
+                    "name": "GlobalIDIndex"
+                }
+            ],
+            "isDataVersioned": false,
+            "maxRecordCount": 1000,
+            "maxScale": 0,
+            "minScale": 0,
+            "name": "Mission_Data_2018",
+            "objectIdField": "objectid",
+            "relationships": [
+            ],
+            "supportedQueryFormats": "JSON",
+            "supportsAdvancedQueries": true,
+            "supportsRollbackOnFailureParameter": true,
+            "supportsStatistics": true,
+            "templates": [
+            ],
+            "type": "Feature Layer",
+            "typeIdField": "",
+            "types": [
+            ]
+        },
+        {
+            "adminLayerInfo": {
+                "geometryField": {
+                    "name": "Found_Location",
+                    "srid": 4326
+                }
+            },
+            "allowGeometryUpdates": true,
+            "capabilities": "Query,Editing,Create,Update,Delete",
+            "copyrightText": "",
+            "defaultVisibility": true,
+            "description": "",
+            "displayField": "",
+            "drawingInfo": {
+                "labelingInfo": null,
+                "renderer": {
+                    "description": "Survey Data Locations",
+                    "label": "MRA Mission Data 2018",
+                    "symbol": {
+                        "angle": 0,
+                        "color": [
+                            255,
+                            0,
+                            0,
+                            255
+                        ],
+                        "outline": {
+                            "color": [
+                                255,
+                                255,
+                                0,
+                                255
+                            ],
+                            "width": 1
+                        },
+                        "size": 8,
+                        "style": "esriSMSCircle",
+                        "type": "esriSMS",
+                        "xoffset": 0,
+                        "yoffset": 0
+                    },
+                    "type": "simple"
+                },
+                "transparency": 0
+            },
+            "extent": {
+                "spatialReference": {
+                    "wkid": 4326
+                },
+                "type": "extent",
+                "xmax": 180,
+                "xmin": -180,
+                "ymax": 90,
+                "ymin": -90
+            },
+            "fields": [
+                {
+                    "alias": "ObjectID",
+                    "defaultValue": null,
+                    "domain": null,
+                    "editable": false,
+                    "name": "objectid",
+                    "nullable": false,
+                    "type": "esriFieldTypeOID"
+                },
+                {
+                    "alias": "GlobalID",
+                    "defaultValue": null,
+                    "domain": null,
+                    "editable": false,
+                    "length": 38,
+                    "name": "globalid",
+                    "nullable": false,
+                    "sqlType": "sqlTypeGUID",
+                    "type": "esriFieldTypeGlobalID"
+                },
+                {
+                    "alias": "How Were the Subject(s) Found?",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "How_Found",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Specify Other for How Subject(s) Were Found",
+                    "domain": null,
+                    "editable": true,
+                    "length": 500,
+                    "name": "How_Found_Other",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "Subject Mobility and Responsiveness",
+                    "domain": null,
+                    "editable": true,
+                    "length": 255,
+                    "name": "Mobility_Responsiveness",
+                    "nullable": true,
+                    "type": "esriFieldTypeString"
+                },
+                {
+                    "alias": "ParentGlobalID",
+                    "defaultValue": null,
+                    "domain": null,
+                    "editable": true,
+                    "length": 38,
+                    "name": "parentglobalid",
+                    "nullable": true,
+                    "sqlType": "sqlTypeGUID",
+                    "type": "esriFieldTypeGUID"
+                }
+            ],
+            "geometryType": "esriGeometryPoint",
+            "globalIdField": "globalid",
+            "hasAttachments": false,
+            "hasM": false,
+            "hasStaticData": false,
+            "hasZ": false,
+            "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+            "id": 1,
+            "indexes": [
+                {
+                    "description": "GlobalID index",
+                    "fields": "globalid",
+                    "isAscending": false,
+                    "isUnique": true,
+                    "name": "GlobalIDIndex"
+                },
+                {
+                    "description": "Child Key Field index",
+                    "fields": "parentglobalid",
+                    "isAscending": false,
+                    "isUnique": false,
+                    "name": "ParentGlobalIDIndex"
+                }
+            ],
+            "isDataVersioned": false,
+            "maxRecordCount": 1000,
+            "maxScale": 0,
+            "minScale": 0,
+            "name": "Point_Found",
+            "objectIdField": "objectid",
+            "relationships": [
+            ],
+            "supportedQueryFormats": "JSON",
+            "supportsAdvancedQueries": true,
+            "supportsRollbackOnFailureParameter": true,
+            "supportsStatistics": true,
+            "templates": [
+            ],
+            "type": "Feature Layer",
+            "typeIdField": "",
+            "types": [
+            ]
+        }
+    ],
+    "relationshipsDefinition": null,
+    "tables": null
+}
